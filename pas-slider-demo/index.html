@@ -50,7 +50,7 @@
       $("#single-other").val(data.value.toFixed(0)).attr('value', data.value.toFixed(0));
       $(".single-amount").html(data.value.toFixed(0));
       if ($('.single-amount').text() === '0') {
-        $('.single-text .symbol, .single-amount').hide();
+        $('.single-text .symbol, .single-text .single-amount, .single-text .month').hide();
         $('.single-desc').html('Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.');
         $('.single-image').attr({
           src: 'images/single-default.jpg',
@@ -134,7 +134,7 @@
       $("#monthly-other").val(data.value.toFixed(0)).attr('value', data.value.toFixed(0));
       $(".monthly-amount").html(data.value.toFixed(0));
       if ($('.monthly-amount').text() === '0') {
-        $('.monthly-text .symbol, .monthly-text .month, .monthly-amount').hide();
+        $('.monthly-text .symbol, .monthly-text .monthly-amount, .monthly-text .month').hide();
         $('.monthly-desc').html('Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.');
         $('.monthly-image').attr({
           src: 'images/monthly-default.jpg',
