@@ -18,8 +18,18 @@
   <h2>Make a single donation</h2>
   <img class="single-image" src="images/single-default.jpg" alt="Single Default" />
   <h3 class="single-title">How much would you like to give?</h3>
-  <p class="single-text"><span class="symbol">$</span><span class="single-amount"></span> <span class="single-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</span></p>
+  <p class="single-text"><span class="symbol">$</span><span class="single-amount"></span> <span class="single-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.</span></p>
   <div class="single-slider"><input id="single-slider" type="text" data-slider="true" value="500" data-slider-values="0,50,100,250,500,1000,2500,5000" data-slider-equal-steps="true" data-slider-snap="true" data-slider-highlight="true"></div>
+  <ul class="labels">
+    <li class="one">0</li>
+    <li class="two">$50</li>
+    <li class="three">$100</li>
+    <li class="four">$250</li>
+    <li class="five">$500</li>
+    <li class="six">$1000</li>
+    <li class="seven">$2500</li>
+    <li class="eight">$5000</li>
+  </ul>
   <p class="single-note">Amount ($500 is average):</p>
   <p class="single-field"><strong>$</strong></p>
   <input type="submit" value="Next Step" />
@@ -31,8 +41,18 @@
   <h2>Become a monthly supporter</h2>
   <img class="monthly-image" src="images/monthly-default.jpg" alt="Monthly Default" />
   <h3 class="monthly-title">How much would you like to give monthly?</h3>
-  <p class="monthly-text"><span class="symbol">$</span><span class="monthly-amount"></span><span class="month">/month</span> <span class="monthly-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</span></p>
+  <p class="monthly-text"><span class="symbol">$</span><span class="monthly-amount"></span><span class="month">/month</span> <span class="monthly-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.</span></p>
   <div class="monthly-slider"><input id="monthly-slider" type="text" data-slider="true" value="25" data-slider-values="0,5,10,25,50,100,250,500" data-slider-equal-steps="true" data-slider-snap="true" data-slider-highlight="true"></div>
+  <ul class="labels">
+    <li class="one">0</li>
+    <li class="two">$5</li>
+    <li class="three">$10</li>
+    <li class="four">$25</li>
+    <li class="five">$50</li>
+    <li class="six">$100</li>
+    <li class="seven">$250</li>
+    <li class="eight">$500</li>
+  </ul>
   <p class="monthly-note">Amount ($25 is average):</p>
   <p class="monthly-field"><strong>$</strong></p>
   <input type="submit" value="Next Step" />
@@ -51,7 +71,7 @@
       $(".single-amount").html(data.value.toFixed(0));
       if ($('.single-amount').text() === '0') {
         $('.single-text .symbol, .single-text .single-amount, .single-text .month').hide();
-        $('.single-desc').html('Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.');
+        $('.single-desc').html('Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.');
         $('.single-image').attr({
           src: 'images/single-default.jpg',
           alt: 'Single Default'
@@ -61,49 +81,49 @@
         $('.single-text .symbol, .single-amount').show();
       }
       if ($('.single-amount').text() === '50') {
-        $('.single-desc').html('could provide a family with insulation to shelter and protect from the cold winter weather');
+        $('.single-desc').html('could provide a family with insulation to shelter and protect them from the harsh cold winter weather.');
         $('.single-image').attr({
           src: 'images/single-50.jpg',
           alt: 'Donate $50'
         });
       }
       if ($('.single-amount').text() === '100') {
-        $('.single-desc').html('could provide a family with insulation to shelter and protect from the cold winter weather');
+        $('.single-desc').html('could provide a family with insulation to shelter and protect them from the harsh cold winter weather.');
         $('.single-image').attr({
           src: 'images/single-100.jpg',
           alt: 'Donate $100'
         });
       }
       if ($('.single-amount').text() === '250') {
-        $('.single-desc').html('could provide a family with insulation to shelter and protect from the cold winter weather');
+        $('.single-desc').html('could provide a family with insulation to shelter and protect them from the harsh cold winter weather.');
         $('.single-image').attr({
           src: 'images/single-250.jpg',
           alt: 'Donate $250'
         });
       }
       if ($('.single-amount').text() === '500') {
-        $('.single-desc').html('could provide a family with insulation to shelter and protect from the cold winter weather');
+        $('.single-desc').html('could provide a family with insulation to shelter and protect them from the harsh cold winter weather.');
         $('.single-image').attr({
           src: 'images/single-500.jpg',
           alt: 'Donate $500'
         });
       }
       if ($('.single-amount').text() === '1000') {
-        $('.single-desc').html('could provide a family with insulation to shelter and protect from the cold winter weather');
+        $('.single-desc').html('could provide a family with insulation to shelter and protect them from the harsh cold winter weather.');
         $('.single-image').attr({
           src: 'images/single-1000.jpg',
           alt: 'Donate $1000'
         });
       }
       if ($('.single-amount').text() === '2500') {
-        $('.single-desc').html('could provide a family with insulation to shelter and protect from the cold winter weather');
+        $('.single-desc').html('could provide a family with insulation to shelter and protect them from the harsh cold winter weather.');
         $('.single-image').attr({
           src: 'images/single-2500.jpg',
           alt: 'Donate $2500'
         });
       }
       if ($('.single-amount').text() === '5000') {
-        $('.single-desc').html('could provide a family with insulation to shelter and protect from the cold winter weather');
+        $('.single-desc').html('could provide a family with insulation to shelter and protect them from the harsh cold winter weather.');
         $('.single-image').attr({
           src: 'images/single-5000.jpg',
           alt: 'Donate $5000'
@@ -114,7 +134,7 @@
     $('#single-other').focus(function() {
       $('.single-slider').addClass('disabled');
       $('.monthly-slider').removeClass('disabled');
-      $('.single-desc').html('Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.');
+      $('.single-desc').html('Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.');
       $('.single-image').attr({
         src: 'images/single-default.jpg',
         alt: 'Single Default'
@@ -135,7 +155,7 @@
       $(".monthly-amount").html(data.value.toFixed(0));
       if ($('.monthly-amount').text() === '0') {
         $('.monthly-text .symbol, .monthly-text .monthly-amount, .monthly-text .month').hide();
-        $('.monthly-desc').html('Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.');
+        $('.monthly-desc').html('Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.');
         $('.monthly-image').attr({
           src: 'images/monthly-default.jpg',
           alt: 'Monthly Default'
@@ -145,49 +165,49 @@
         $('.monthly-text .symbol, .monthly-amount').show();
       }
       if ($('.monthly-amount').text() === '5') {
-        $('.monthly-desc').html('can supply vaccinations to safeguard refugee children agains diseases such as measles and polio');
+        $('.monthly-desc').html('can supply vaccinations to safeguard refugee children against diseases such as measles and polio.');
         $('.monthly-image').attr({
           src: 'images/monthly-5.jpg',
           alt: 'Donate $5 per month'
         });
       }
       if ($('.monthly-amount').text() === '10') {
-        $('.monthly-desc').html('can supply vaccinations to safeguard refugee children agains diseases such as measles and polio');
+        $('.monthly-desc').html('can supply vaccinations to safeguard refugee children against diseases such as measles and polio.');
         $('.monthly-image').attr({
           src: 'images/monthly-10.jpg',
           alt: 'Donate $10 per month'
         });
       }
       if ($('.monthly-amount').text() === '25') {
-        $('.monthly-desc').html('can supply vaccinations to safeguard refugee children agains diseases such as measles and polio');
+        $('.monthly-desc').html('can supply vaccinations to safeguard refugee children against diseases such as measles and polio.');
         $('.monthly-image').attr({
           src: 'images/monthly-25.jpg',
           alt: 'Donate $25 per month'
         });
       }
       if ($('.monthly-amount').text() === '50') {
-        $('.monthly-desc').html('can supply vaccinations to safeguard refugee children agains diseases such as measles and polio');
+        $('.monthly-desc').html('can supply vaccinations to safeguard refugee children against diseases such as measles and polio.');
         $('.monthly-image').attr({
           src: 'images/monthly-50.jpg',
           alt: 'Donate $50 per month'
         });
       }
       if ($('.monthly-amount').text() === '100') {
-        $('.monthly-desc').html('can supply vaccinations to safeguard refugee children agains diseases such as measles and polio');
+        $('.monthly-desc').html('can supply vaccinations to safeguard refugee children against diseases such as measles and polio.');
         $('.monthly-image').attr({
           src: 'images/monthly-100.jpg',
           alt: 'Donate $100 per month'
         });
       }
       if ($('.monthly-amount').text() === '250') {
-        $('.monthly-desc').html('can supply vaccinations to safeguard refugee children agains diseases such as measles and polio');
+        $('.monthly-desc').html('can supply vaccinations to safeguard refugee children against diseases such as measles and polio.');
         $('.monthly-image').attr({
           src: 'images/monthly-250.jpg',
           alt: 'Donate $250 per month'
         });
       }
       if ($('.monthly-amount').text() === '500') {
-        $('.monthly-desc').html('can supply vaccinations to safeguard refugee children agains diseases such as measles and polio');
+        $('.monthly-desc').html('can supply vaccinations to safeguard refugee children against diseases such as measles and polio.');
         $('.monthly-image').attr({
           src: 'images/monthly-500.jpg',
           alt: 'Donate $500 per month'
@@ -198,7 +218,7 @@
     $('#monthly-other').focus(function() {
       $('.monthly-slider').addClass('disabled');
       $('.single-slider').removeClass('disabled');
-      $('.monthly-desc').html('Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.');
+      $('.monthly-desc').html('Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.');
       $('.monthly-image').attr({
         src: 'images/monthly-default.jpg',
         alt: 'Monthly Default'
