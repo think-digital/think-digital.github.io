@@ -1,0 +1,52 @@
+.c-social {
+
+	@include m('follow') {
+		
+	}
+
+	@include m('share') {
+		
+	}
+
+	@include e('icon') {
+
+	
+		@include m('large') {
+			
+		}
+
+		@include m('round') {
+			
+		}
+
+		@include m('outline') {
+			
+		}
+
+		@include m('email') {
+			
+		}
+
+		@include m('facebook') {
+			
+		}
+
+		@include m('instagram') {
+			
+		}
+
+		@include m('twitter') {
+			
+		}
+
+		@include m('whatsapp') {
+			
+		}
+
+		@include m('youtube') {
+			
+		}
+
+	}
+
+}

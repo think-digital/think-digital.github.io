@@ -1,0 +1,70 @@
+// All variables for the project
+
+// Breakpoints
+
+$extra-small-break: 480px;
+$small-break: 768px;
+$medium-break: 992px;
+$large-break: 1030px;
+
+// Numbers
+
+$spacing: 20px;
+
+// Theme colours
+
+$primary: #2dcc70;
+$secondary: #f4b350;
+$tertiary: #f4b350;
+
+// Element colours
+
+$title: #2c3e50;
+$subtitle: #747474;
+$paragraph: #3f3f3f;
+$link: #2dcc70;
+$highlight: #d3d3d3;
+$border: #d3d3d3;
+$panel: #f6f6f6;
+
+// Alert colours
+
+$success: #69b670;
+$error: #ee2d14;
+
+// Default colours
+
+$black: #000;    
+$white: #fff;
+
+// Brand colours
+
+$facebook: #3b5998;
+$google: #dd4b39;
+$instagram: #405de6;
+$linkedin: #0077b5;
+$snapchat: #fffc00;
+$twitter: #1da1f2;
+$whatsapp: #25d366;
+$youtube: #cd201f;
+
+// Fonts
+
+// @font-face { 
+// 	@include font-face(ADD FONT NAME,'ADD FILENAME')  
+// }
+
+@mixin font-normal {
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-weight: normal;
+}
+
+@mixin font-semibold {
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-weight: 500;
+}
+
+@mixin font-bold {
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-weight: bold;
+}

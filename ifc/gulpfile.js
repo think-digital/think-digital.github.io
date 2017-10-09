@@ -1,9 +1,9 @@
 // Paths
 
-var theme = 'boilerplate';
-var csspath = 'assets/styles';
-var jspath = 'assets/js';
-var imgpath = 'assets/img';
+var theme = 'ifc';
+var csspath = 'css';
+var jspath = 'js';
+var imgpath = 'img';
 
 // Gulp dependencies
 
@@ -15,7 +15,7 @@ var gulp = require('gulp'),
 // Compress less
 
 gulp.task('sass', function () {
-  return gulp.src(csspath + '/styles.scss')
+  return gulp.src(csspath + '/app.scss')
     .pipe(sass().on('error', sass.logError))
     .pipe(gulp.dest(csspath + '/', {overwrite: true} ));
 });
@@ -23,13 +23,13 @@ gulp.task('sass', function () {
 // Compress js
 
 gulp.task('js', function () {
-    gulp.src(jspath + '/global.js')
-    .pipe(gulp.dest(jspath + '/min/', {overwrite: true} ));
+    gulp.src(jspath + '/app.js')
+    .pipe(gulp.dest(jspath + '/', {overwrite: true} ));
 });
 
 // Watch for changes
 
 gulp.task('watch', ['sass', 'js'], function (){
     gulp.watch(csspath + '/**/*.scss', ['sass']);
-    gulp.watch(jspath + '/global.js', ['js']);
+    gulp.watch(jspath + '/app.js', ['js']);
 });

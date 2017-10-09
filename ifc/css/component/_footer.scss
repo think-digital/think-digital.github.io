@@ -1,0 +1,11 @@
+.c-footer {
+
+	@include e('link') {
+		color: inherit;
+	}
+
+	@include e('text') {
+		
+	}
+
+}

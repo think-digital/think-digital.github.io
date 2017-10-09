@@ -1,0 +1,17 @@
+.l-band {
+	padding: 40px 0;
+
+	@include m('highlight') {
+		background-color: $panel;
+	}
+
+	@include m('header') {
+		
+	}
+
+	@include m('footer') {
+		background-color: $black;
+		color: $white;
+	}
+	
+}

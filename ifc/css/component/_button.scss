@@ -1,0 +1,24 @@
+.c-button {
+
+	@include m('full') {
+		display: block;
+		width: 100%;
+	}
+
+	@include m('large') {
+		
+	}
+
+	@include m('primary') {
+
+	}
+
+	@include m('secondary') {
+		
+	}
+
+	@include m('outline') {
+		background: none;
+	}
+
+}

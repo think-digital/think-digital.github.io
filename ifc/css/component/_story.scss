@@ -1,0 +1,20 @@
+.c-story {
+	font-size: 18px;
+
+	@include e('header') {
+		
+	}
+
+	@include e('heading') {
+		
+	}
+
+	@include e('subheading') {
+		
+	}
+
+	@include e('lead') {
+		
+	}
+
+}

@@ -1,0 +1,18 @@
+.l-grid {
+	@include flex-display;
+	@include flex-flow(row wrap);
+
+	@include e('item') {
+		@include flex(1);
+
+		@include m('grow-2') {
+			@include flex(2);
+		}
+
+		@include m('grow-3') {
+			@include flex(2);
+		}
+
+	}
+	
+}
