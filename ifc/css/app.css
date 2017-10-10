@@ -28,8 +28,9 @@ nav ul {
 blockquote, q {
   quotes: none; }
 
-blockquote:before, blockquote:after,
-q:before, q:after {
+blockquote:before, blockquote.c-quote__text:after, blockquote:after,
+q:before,
+q.c-quote__text:after, q:after {
   content: '';
   content: none; }
 
@@ -71,8 +72,10 @@ img {
   max-width: 100%;
   width: auto; }
 
-*, *:before, *:after {
-  box-sizing: inherit; }
+*, *:before, *.c-quote__text:after, *:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
 
 ::selection {
   background: #d3d3d3;
@@ -82,13 +85,22 @@ img {
   background: #d3d3d3;
   color: #fff; }
 
-.l-band {
-  padding: 40px 0; }
-  .l-band--highlight {
-    background-color: #f6f6f6; }
-  .l-band--footer {
-    background-color: #000;
-    color: #fff; }
+.is-hidden {
+  display: none; }
+
+.l-band--highlight {
+  background-color: #e3e3e3; }
+
+.l-band--header {
+  padding: 20px 40px; }
+
+.l-band--hero {
+  padding: 0; }
+
+.l-band--footer {
+  background-color: #000;
+  color: #fff;
+  padding: 40px; }
 
 .l-container {
   margin: 0 auto;
@@ -139,19 +151,28 @@ img {
     .lt-ie8 .l-list__item--inline {
       display: inline;
       zoom: 1; }
+  .l-list__item--divider {
+    border-left: 2px solid rgba(255, 255, 255, 0.25);
+    margin-left: 8px;
+    padding-left: 10px; }
   .l-list__item--tab {
     -webkit-flex: 1;
     -ms-flex: 1;
     flex: 1; }
 
+body {
+  background-color: #f6f6f6; }
+
 .l-page {
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  background-color: #fff;
+  font-family: 'Open Sans', sans-serif;
   font-weight: normal;
   font-size: 16px;
   font-size: 1.6rem;
   letter-spacing: -0.5px;
   line-height: 20px;
   line-height: 2rem;
+  margin: 0 auto;
   max-width: 1200px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -162,12 +183,143 @@ img {
   .l-page--full {
     max-width: 100%; }
 
-.c-button--full {
-  display: block;
-  width: 100%; }
+.c-button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: none;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  display: inline-block;
+  font-family: 'Bitter', serif;
+  font-size: 18px;
+  font-size: 1.8rem;
+  line-height: 48px;
+  line-height: 4.8rem;
+  margin: 0;
+  max-width: 100%;
+  padding: 0 20px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  vertical-align: middle; }
+  .lt-ie8 .c-button {
+    display: inline;
+    zoom: 1; }
+  .c-button:hover {
+    cursor: pointer; }
+  .c-button:active, .c-button:target {
+    position: relative;
+    top: 2px; }
+  .c-button--full {
+    display: block;
+    width: 100%; }
+  .c-button--large {
+    font-size: 24px;
+    font-size: 2.4rem;
+    line-height: 56px;
+    line-height: 5.6rem;
+    padding: 0 40px; }
+  .c-button--primary {
+    background-color: #2dcc70;
+    color: #fff; }
+    .the-freedom-campaign .c-button--primary {
+      background-color: #9B48A3; }
+  .c-button--secondary {
+    background-color: #f4b350;
+    color: #fff; }
+  .c-button--outline {
+    background: none;
+    border: 2px solid #fff;
+    color: #fff; }
+    .c-button--outline:hover {
+      background-color: #fff;
+      color: #2dcc70; }
+      .the-freedom-campaign .c-button--outline:hover {
+        color: #9B48A3;
+        cursor: pointer; }
 
-.c-button--outline {
-  background: none; }
+.c-donation {
+  font-size: 18px;
+  font-size: 1.8rem;
+  line-height: 26px;
+  line-height: 2.6rem;
+  background-color: #e3e3e3;
+  margin-bottom: 10px;
+  padding: 40px; }
+  .c-donation__heading {
+    font-family: 'Bitter', serif;
+    font-size: 28px;
+    font-size: 2.8rem;
+    line-height: 36px;
+    line-height: 3.6rem;
+    margin-bottom: 12px; }
+  .c-donation__sub-heading {
+    font-family: 'Bitter', serif;
+    display: block;
+    margin-bottom: 12px; }
+  .c-donation__amount-desc {
+    display: none; }
+  .c-donation__other {
+    margin-bottom: 20px; }
+  .c-donation__other-label {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: -ms-flex;
+    display: flex;
+    -webkit-flex-flow: row;
+    -ms-flex-flow: row;
+    flex-flow: row;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    font-size: 1.8rem;
+    height: 48px;
+    height: 4.8rem;
+    line-height: 48px;
+    line-height: 4.8rem;
+    background: #fff;
+    border: 1px solid #d3d3d3;
+    color: #3f3f3f;
+    max-width: 100%;
+    vertical-align: middle;
+    width: auto; }
+  .c-donation__other-currency {
+    font-weight: bold;
+    margin: 0 5px 0 15px;
+    position: relative;
+    top: -1px; }
+  .c-donation__other-input {
+    -webkit-appearance: textfield;
+    -moz-appearance: textfield;
+    appearance: textfield;
+    font-size: 18px;
+    font-size: 1.8rem;
+    background: none;
+    border: none;
+    padding-right: 15px;
+    width: 100%; }
+  .c-donation__submit {
+    margin-bottom: 20px; }
+  .c-donation__secure {
+    font-size: 14px;
+    font-size: 1.4rem;
+    line-height: 20px;
+    line-height: 2rem;
+    color: rgba(0, 0, 0, 0.75); }
+
+.c-checkbox__field-text {
+  font-size: 14px;
+  font-size: 1.4rem;
+  line-height: 18px;
+  line-height: 1.8rem; }
 
 .c-validation--success {
   color: #69b670; }
@@ -175,11 +327,165 @@ img {
 .c-validation--error {
   color: #ee2d14; }
 
-.c-footer__link {
-  color: inherit; }
+.c-footer {
+  font-size: 12px;
+  font-size: 1.2rem;
+  font-size: 14px;
+  font-size: 1.4rem; }
+  .c-footer__link {
+    border-bottom: 1px solid #fff;
+    color: inherit;
+    text-decoration: none; }
+
+.c-header__logo {
+  max-height: 64px; }
+
+.c-hero {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: -ms-flex;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+  -ms-flex-flow: row wrap;
+  flex-flow: row wrap; }
+  .c-hero__aside {
+    -webkit-align-items: center;
+    -ms-align-items: center;
+    align-items: center;
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: -ms-flex;
+    display: flex;
+    -webkit-flex-flow: row wrap;
+    -ms-flex-flow: row wrap;
+    flex-flow: row wrap;
+    -webkit-order: 2;
+    -ms-order: 2;
+    order: 2;
+    background-color: #e3e3e3; }
+    .the-freedom-campaign .c-hero__aside {
+      background-color: #9B48A3;
+      color: #fff; }
+  .c-hero__wrap {
+    padding: 40px; }
+  .c-hero__heading {
+    font-size: 24px;
+    font-size: 2.4rem;
+    line-height: 28px;
+    line-height: 2.8rem;
+    margin-bottom: 12px;
+    font-family: 'Bitter', serif; }
+  .c-hero__text {
+    font-size: 18px;
+    font-size: 1.8rem;
+    line-height: 24px;
+    line-height: 2.4rem;
+    margin-bottom: 24px; }
+  .c-hero__img {
+    -webkit-flex: 2;
+    -ms-flex: 2;
+    flex: 2;
+    -webkit-order: 1;
+    -ms-order: 1;
+    order: 1;
+    display: block;
+    background-color: black;
+    min-height: 480px; }
+
+.c-lead-gen {
+  background-color: #e3e3e3;
+  margin-bottom: 10px;
+  padding: 40px; }
+
+.c-quote {
+  margin-bottom: 30px; }
+  .c-quote__text {
+    color: #2dcc70;
+    font-family: 'Bitter', serif;
+    font-size: 24px;
+    font-size: 2.4rem;
+    line-height: 32px;
+    line-height: 3.2rem; }
+    .the-freedom-campaign .c-quote__text {
+      color: #9B48A3; }
+    .c-quote__text:before, .c-quote__text:after {
+      content: '\f10d';
+      font-family: 'FontAwesome';
+      font-size: 14px;
+      font-size: 1.4rem;
+      padding-right: 3px;
+      position: relative;
+      top: -8px; }
+    .c-quote__text:after {
+      content: '\f10e';
+      padding-left: 3px; }
+  .c-quote__name {
+    border-left: 3px solid #2dcc70;
+    font-size: 14px;
+    font-size: 1.4rem;
+    line-height: 18px;
+    line-height: 1.8rem;
+    margin: 8px 0 0;
+    padding: 0 0 0 10px; }
+    .the-freedom-campaign .c-quote__name {
+      border-color: #9B48A3; }
+  .c-quote__label {
+    font-style: normal;
+    -webkit-opacity: 0.75;
+    -moz-opacity: 0.75;
+    opacity: 0.75; }
+
+.c-social--follow {
+  text-align: right; }
+
+.c-social__icon {
+  color: #fff;
+  font-size: 28px;
+  font-size: 2.8rem;
+  margin: 0 5px; }
+  .c-social__icon--email:hover {
+    color: #2dcc70; }
+    .the-freedom-campaign .c-social__icon--email:hover {
+      color: #9B48A3; }
+  .c-social__icon--facebook:hover {
+    color: #3b5998; }
+  .c-social__icon--instagram:hover {
+    color: #405de6; }
+  .c-social__icon--twitter:hover {
+    color: #1da1f2; }
+  .c-social__icon--whatsapp:hover {
+    color: #25d366; }
+  .c-social__icon--youtube:hover {
+    color: #cd201f; }
 
 .c-story {
-  font-size: 18px; }
+  font-size: 18px;
+  font-size: 1.8rem;
+  line-height: 26px;
+  line-height: 2.6rem;
+  margin-bottom: 10px;
+  padding: 40px; }
+  .c-story__heading {
+    font-size: 28px;
+    font-size: 2.8rem;
+    line-height: 36px;
+    line-height: 3.6rem;
+    margin-bottom: 20px;
+    font-family: 'Bitter', serif; }
+  .c-story__sub-heading {
+    font-family: 'Bitter', serif;
+    margin-bottom: 12px; }
+  .c-story__lead {
+    font-size: 20px;
+    font-size: 2rem;
+    line-height: 28px;
+    line-height: 2.8rem;
+    margin-bottom: 20px; }
+  .c-story__text {
+    margin-bottom: 20px; }
 
 .c-video .c-video__ratio {
   position: relative;

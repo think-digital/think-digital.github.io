@@ -47,6 +47,7 @@
     <!-- so:stylesheets -->
     <link rel="stylesheet" type="text/css" href="../ifc/css/app.css">
     <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Bitter:700|Open+Sans:400,600,700" rel="stylesheet">
     <!-- eo:stylesheets -->
 
     <!-- so:javascripts -->
@@ -64,13 +65,13 @@
 <body class="donate the-freedom-campaign">
 
     <!-- so:page -->
-    <div class="l-page l-page--full">
+    <div class="l-page">
         
         <!-- so:header -->
         <header class="l-band l-band--header">
             <div class="l-container">
                 <div class="c-header">
-                    <h1 class="c-header__logo">The Freedom Campaign</h1>
+                    <img class="c-header__logo" src="img/logo.png" alt="The Freedom Campaign"/>
                 </div>
             </div>
         </header>
@@ -78,13 +79,15 @@
 
         <!-- so:main -->
         <main>
-            <div id="hero" class="l-band">
+            <div id="hero" class="l-band l-band--hero">
                 <div class="l-container">
                     <div class="c-hero">
                         <aside class="c-hero__aside">
-                            <h2 class="c-hero__heading">Add title here</h2>
-                            <p class="c-hero__text">Add text here</p>
-                            <a href="#donate" class="c-button c-button--primary c-button--large c-button--full" role="button" title="Donate now">Donate now</a>
+                            <div class="c-hero__wrap">
+                                <h2 class="c-hero__heading">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h2>
+                                <p class="c-hero__text">Vestibulum sem eros, semper id eros vitae, ullamcorper volutpat eros. Phasellus a felis eu magna dapibus hendrerit.</p>
+                                <a href="#donate" class="c-button c-button--large c-button--full c-button--outline" role="button" title="Donate now">Donate now</a>
+                            </div>
                         </aside>
                         <img class="c-hero__img" src="/" height="640" width="1400" alt=""/>
                     </div>
@@ -100,9 +103,9 @@
                                         <h2 class="c-story__heading">Add heading here</h2>
                                         <p class="c-story__lead">Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Duis mollis, est non commodo luctus.</p>
                                     </header>
-                                    <p>Nullam quis risus eget urna mollis ornare vel eu leo. Donec ullamcorper nulla non metus auctor fringilla. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Donec         ullamcorper nulla non metus auctor fringilla.</p>
-                                    <h3 class="c-story__sub-heading"></h3>
-                                    <p>Maecenas sed diam eget risus varius <strong>bold</strong> blandit sit amet <em>italic</em> non magna. Donec id elit <u>underlined</u> non mi porta gravida at eget metus. Duis mollis, est non commodo luctus, nisi      erat porttitor ligula, eget lacinia odio sem nec elit.</p>
+                                    <p class="c-story__text">Nullam quis risus eget urna mollis ornare vel eu leo. Donec ullamcorper nulla non metus auctor fringilla. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Donec  ullamcorper nulla non metus auctor fringilla.</p>
+                                    <h3 class="c-story__sub-heading">Sub-heading</h3>
+                                    <p class="c-story__text">Maecenas sed diam eget risus varius <strong>bold</strong> blandit sit amet <em>italic</em> non magna. Donec id elit <u>underlined</u> non mi porta gravida at eget metus. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
                                     <ul class="l-list l-list--unordered">
                                         <li class="l-list__item">Lorem ipsum dolor sit amet</li>
                                         <li class="l-list__item">Consectetur adipiscing elit</li>
@@ -122,7 +125,7 @@
                                         <p class="c-quote__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
                                         <footer class="c-quote__name">Name Surname <cite class="c-quote__label" title="Organisation">Organisation</cite></footer>
                                     </blockquote>
-                                    <a href="#donate" class="c-button c-button--primary c-button--large" role="button" title="Donate now">Donate now</a>
+                                    <a href="#donate" class="c-button c-button--primary" role="button" title="Donate now">Donate now</a>
                                 </article>
                             </div>
                         </div>
@@ -138,31 +141,31 @@
                                                     <li class="l-list__item l-list__item--tab">
                                                         <label class="c-donation__amount-label" for="5" title="Donate £5">
                                                             <input class="c-donation__amount-radio" type="radio" value="5" id="5" name="amount" data-desc="Giving £5 can help vorem ipsum dolor sit amet..."/>
-                                                            <span class="c-donation__amount-text"><strong class="c-donation__amount-currency">&dollar;</strong>5</span>
+                                                            <span class="c-donation__amount-text"><strong class="c-donation__amount-currency">&pound;</strong>5</span>
                                                         </label>
                                                     </li>
                                                     <li class="l-list__item l-list__item--tab">
                                                         <label class="c-donation__amount-label" for="10" title="Donate £10">
                                                             <input class="c-donation__amount-radio" type="radio" value="10" id="10" name="amount" data-desc="Giving £10 can help vorem ipsum dolor sit amet..."/>
-                                                            <span class="c-donation__amount-text"><strong class="c-donation__amount-currency">&dollar;</strong>10</span>
+                                                            <span class="c-donation__amount-text"><strong class="c-donation__amount-currency">&pound;</strong>10</span>
                                                         </label>
                                                     </li>
                                                     <li class="l-list__item l-list__item--tab">
                                                         <label class="c-donation__amount-label is-active" for="25" title="Donate £25">
                                                             <input class="c-donation__amount-radio" type="radio" value="25" id="25" name="amount" data-desc="Giving £25 can help vorem ipsum dolor sit amet..." checked="checked"/>
-                                                            <span class="c-donation__amount-text"><strong class="c-donation__amount-currency">&dollar;</strong>25</span>
+                                                            <span class="c-donation__amount-text"><strong class="c-donation__amount-currency">&pound;</strong>25</span>
                                                         </label>
                                                     </li>
                                                     <li class="l-list__item l-list__item--tab">
                                                         <label class="c-donation__amount-label" for="50" title="Donate £50">
                                                             <input class="c-donation__amount-radio" type="radio" value="50" id="50" name="amount" data-desc="Giving £50 can help vorem ipsum dolor sit amet..."/>
-                                                            <span class="c-donation__amount-text"><strong class="c-donation__amount-currency">&dollar;</strong>50</span>
+                                                            <span class="c-donation__amount-text"><strong class="c-donation__amount-currency">&pound;</strong>50</span>
                                                         </label>
                                                     </li>
                                                     <li class="l-list__item l-list__item--tab">
                                                         <label class="c-donation__amount-label" for="100" title="Donate £100">
                                                             <input class="c-donation__amount-radio" type="radio" value="100" id="100" name="amount" data-desc="Giving £100 can help vorem ipsum dolor sit amet..."/>
-                                                            <span class="c-donation__amount-text"><strong class="c-donation__amount-currency">&dollar;</strong>100</span>
+                                                            <span class="c-donation__amount-text"><strong class="c-donation__amount-currency">&pound;</strong>100</span>
                                                         </label>
                                                     </li>
                                                 </ul>
@@ -171,8 +174,10 @@
                                             <div class="c-donation__other">
                                                 <label class="c-donation__sub-heading" for="amount" title="Or enter your own amount:">Or enter your own amount:</label>
                                                 <div class="c-donation__other-field">
-                                                    <label class="c-donation__other-label" for="amount">&dollar;</label>
-                                                    <input class="c-donation__other-input" type="number" placeholder="0.00" value="" name="amount" id="amount" size="4" min="5" max="100000" data-error-meesage="Please enter a minimum donation of £5"/>
+                                                    <label class="c-donation__other-label" for="amount">
+                                                        <strong class="c-donation__other-currency">&pound;</strong>
+                                                        <input class="c-donation__other-input" type="number" placeholder="0.00" value="" name="amount" id="amount" size="4" min="5" max="100000" data-error-meesage="Please enter a minimum donation of £5"/>
+                                                    </label>
                                                 </div>
                                             </div>
                                             <div class="c-donation__extra-fields">
@@ -215,7 +220,7 @@
                                 <li class="l-list__item l-list__item--inline">
                                     <a class="c-footer__link" href="#" title="Terms & Conditions">Terms &amp; Conditions</a>
                                 </li>
-                                <li class="l-list__item l-list__item--inline">
+                                <li class="l-list__item l-list__item--inline l-list__item--divider">
                                     <a class="c-footer__link" href="#" title="Privacy Policy">Privacy Policy</a>
                                 </li>
                             </ul>

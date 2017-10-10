@@ -1,8 +1,14 @@
+body {
+	background-color: #f6f6f6;
+}
+
 .l-page {
+	background-color: $white;
 	@include font-normal;
 	@include font-size(16);
 	letter-spacing: -0.5px;
 	@include line-height(20);
+	margin: 0 auto;
 	max-width: 1200px;
 	@include text-rendering;
 	word-spacing: auto;

@@ -1,16 +1,18 @@
+$input-height: 48; // Set height for input fields
+$input-height-mobile: 44;  // Set height for input fields for mobile
+$input-border: 1px; // Set border size for input fields
+$input-padding: 0; // Set default padding for all input fields - top and bottom not needed as line-height set
+$input-padding-side: 15px; // Set side padding for all input fields - opposite side to icon
+$input-padding-icon: calc((#{$input-padding-side} + #{$input-padding-side}) + 12px); // Set padding for when icons are present for input fields
+$input-margin-outer-top: ($spacing / 2); // Set top spacing for input fields
+$input-margin-outer-bottom: $spacing; // Set bottom spacing for input fields
+
 .c-donation {
-
-	@include m('stripe') {
-		
-	}
-
-	@include m('oneoff') {
-		
-	}
-
-	@include m('monthly') {
-		
-	}
+	@include font-size(18);
+	@include line-height(26);
+	background-color: $panel;
+	margin-bottom: 10px;
+	padding: 40px;
 
 	@include e('header') {
 		
@@ -19,13 +21,22 @@
 	@include e('form') {
 		
 	}
-	
+
 	@include e('amounts') {
 		
 	}
 	
+	@include e('heading') {
+		@include font-bold;
+		@include font-size(28);
+		@include line-height(36);
+		margin-bottom: 12px;
+	}
+	
 	@include e('sub-heading') {
-		
+		@include font-bold;
+		display: block;
+		margin-bottom: 12px;
 	}
 	
 	@include e('amount-label') {
@@ -45,11 +56,11 @@
 	}
 	
 	@include e('amount-desc') {
-		
+		display: none;
 	}
 	
 	@include e('other') {
-		
+		margin-bottom: 20px;
 	}
 	
 	@include e('other-field') {
@@ -57,11 +68,36 @@
 	}
 
 	@include e('other-label') {
-		
+		@include appearance(none);
+		@include border-radius(3px);
+		@include flex-display;
+		@include flex-flow(row);
+		@include font-semibold;
+		@include font-size(18);
+		@include height(48);
+		@include line-height(48);
+		background: $white;
+		border: 1px solid #{$border};
+		color: $paragraph;
+		max-width: 100%;
+		vertical-align: middle;
+		width: auto;
+	}
+
+	@include e('other-currency') {
+		font-weight: bold;
+		margin: 0 5px 0 15px;
+		position: relative;
+		top: -1px;
 	}
 	
 	@include e('other-input') {
-		
+		@include appearance(textfield);
+		@include font-size(18);
+		background: none;
+		border: none;
+		padding-right: 15px;
+		width: 100%;
 	}
 	
 	@include e('extra-fields') {
@@ -69,7 +105,7 @@
 	}
 
 	@include e('submit') {
-		
+		margin-bottom: 20px;
 	}
 
 	@include e('footnote') {
@@ -77,7 +113,9 @@
 	}
 
 	@include e('secure') {
-		
+		@include font-size(14);
+		@include line-height(20);
+		color: rgba(0,0,0,0.75);
 	}
 
 	@include e('secure-label') {

@@ -1,20 +1,33 @@
 .c-story {
-	font-size: 18px;
+	@include font-size(18);
+	@include line-height(26);
+	margin-bottom: 10px;
+	padding: 40px;
 
 	@include e('header') {
 		
 	}
 
 	@include e('heading') {
-		
+		@include font-size(28);
+		@include line-height(36);
+		margin-bottom: 20px;
+		@include font-bold;
 	}
 
-	@include e('subheading') {
-		
+	@include e('sub-heading') {
+		@include font-bold;
+		margin-bottom: 12px;
 	}
 
 	@include e('lead') {
-		
+		@include font-size(20);
+		@include line-height(28);
+		margin-bottom: 20px;
+	}
+
+	@include e('text') {
+		margin-bottom: 20px;
 	}
 
 }

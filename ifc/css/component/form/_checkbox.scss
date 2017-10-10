@@ -17,7 +17,8 @@
 	}
 
 	@include e('field-text') {
-		
+		@include font-size(14);
+		@include line-height(18);
 	}
 
 }

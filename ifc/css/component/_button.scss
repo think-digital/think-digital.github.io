@@ -1,4 +1,31 @@
 .c-button {
+	@include appearance;
+	border: none;
+	@include border-radius(4px);
+	@include inline-block;
+	@include font-bold;
+	@include font-size(18);
+	@include line-height(48);
+	margin: 0;
+	max-width: 100%;
+	padding: 0 20px;
+	position: relative;
+	text-align: center;
+	text-decoration: none;
+	vertical-align: middle;
+
+	&:hover {
+		cursor: pointer;
+	}
+
+	&:active, &:target {
+		position: relative;
+		top: 2px;
+	}
+
+	&:focus {
+		
+	}
 
 	@include m('full') {
 		display: block;
@@ -6,19 +33,42 @@
 	}
 
 	@include m('large') {
-		
+		@include font-size(24);
+		@include line-height(56);
+		padding: 0 40px;
 	}
 
 	@include m('primary') {
+		background-color: $primary;
+		color: $white;
+
+		.the-freedom-campaign & {
+			background-color: #9B48A3;
+		}
 
 	}
 
 	@include m('secondary') {
-		
+		background-color: $secondary;
+		color: $white;
 	}
 
 	@include m('outline') {
 		background: none;
+		border: 2px solid $white;
+		color: $white;
+
+		&:hover {
+			background-color: $white;
+			color: $primary;
+
+			.the-freedom-campaign & {
+				color: #9B48A3;
+				cursor: pointer;
+			}
+
+		}
+
 	}
 
 }

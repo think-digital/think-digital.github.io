@@ -1,7 +1,7 @@
 .c-social {
 
 	@include m('follow') {
-		
+		text-align: right;
 	}
 
 	@include m('share') {
@@ -9,7 +9,9 @@
 	}
 
 	@include e('icon') {
-
+		color: $white;
+		@include font-size(28);
+		margin: 0 5px;
 	
 		@include m('large') {
 			
@@ -25,26 +27,55 @@
 
 		@include m('email') {
 			
+			&:hover {
+				color: $primary;
+
+				.the-freedom-campaign & {
+					color: #9B48A3;
+				}
+
+			}
+
 		}
 
 		@include m('facebook') {
 			
+			&:hover {
+				color: $facebook;
+			}
+
 		}
 
 		@include m('instagram') {
-			
+
+			&:hover {
+				color: $instagram;
+			}
+
 		}
 
 		@include m('twitter') {
 			
+			&:hover {
+				color: $twitter;
+			}
+
 		}
 
 		@include m('whatsapp') {
 			
+			&:hover {
+				color: $whatsapp;
+			}
+
 		}
 
 		@include m('youtube') {
 			
+			&:hover {
+				color: $youtube;
+			}
+
 		}
 
 	}

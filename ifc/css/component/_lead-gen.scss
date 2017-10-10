@@ -1,4 +1,7 @@
 .c-lead-gen {
+	background-color: $panel;
+	margin-bottom: 10px;
+	padding: 40px;
 
 	@include e('header') {
 		
