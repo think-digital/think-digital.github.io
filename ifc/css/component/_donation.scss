@@ -11,8 +11,11 @@ $input-margin-outer-bottom: $spacing; // Set bottom spacing for input fields
 	@include font-size(18);
 	@include line-height(26);
 	background-color: $panel;
-	margin-bottom: 10px;
-	padding: 40px;
+	padding: 20px;
+
+	@media only screen and (min-width: $small-break) {
+		padding: 40px;
+	}
 
 	@include e('header') {
 		
@@ -40,11 +43,70 @@ $input-margin-outer-bottom: $spacing; // Set bottom spacing for input fields
 	}
 	
 	@include e('amount-label') {
-		
+		@include font-bold;
+		@include font-size(16);
+		@include line-height(48);
+		background-color: $white;
+		border: 1px solid $border;
+		border-right: none;
+		display: block;
+		margin: 0;
+		position: relative;
+		text-align: center;
+		text-decoration: none;
+		vertical-align: middle;
+		width: 100%;
+
+		@media only screen and (min-width: $small-break) {
+			@include font-size(18);
+		}
+
+		.l-list__item--tab:first-child & {
+			@include border-radius(4px 0 0 4px);
+		}
+
+		.l-list__item--tab:last-child & {
+			@include border-radius(0 4px 4px 0);
+			border-right: 1px solid $border;
+		}
+
+		&:hover {
+			cursor: pointer;
+		}
+
+		.the-freedom-campaign & {
+			color: #9B48A3;
+		}
+
 	}
 	
 	@include e('amount-radio') {
-		
+		@include opacity(0);
+		display: block;
+		height: 0;
+		left: 0;
+		margin: 0; 
+		padding: 0;
+		position: absolute;
+		top: 0;
+		width: 0;
+
+		& ~ * {
+			padding: 0 10px;
+		}
+
+		&:focus ~ *,
+		&:checked ~ * {
+			background-color: $primary;
+			color: $white;
+			display: block;
+
+			.the-freedom-campaign & {
+				background-color: #9B48A3;
+			}
+
+		}
+
 	}
 	
 	@include e('amount-text') {
@@ -60,7 +122,7 @@ $input-margin-outer-bottom: $spacing; // Set bottom spacing for input fields
 	}
 	
 	@include e('other') {
-		margin-bottom: 20px;
+		margin: 20px 0;
 	}
 	
 	@include e('other-field') {
@@ -69,7 +131,7 @@ $input-margin-outer-bottom: $spacing; // Set bottom spacing for input fields
 
 	@include e('other-label') {
 		@include appearance(none);
-		@include border-radius(3px);
+		@include border-radius(4px);
 		@include flex-display;
 		@include flex-flow(row);
 		@include font-semibold;
@@ -85,7 +147,7 @@ $input-margin-outer-bottom: $spacing; // Set bottom spacing for input fields
 	}
 
 	@include e('other-currency') {
-		font-weight: bold;
+		@include font-bold;
 		margin: 0 5px 0 15px;
 		position: relative;
 		top: -1px;
@@ -120,6 +182,10 @@ $input-margin-outer-bottom: $spacing; // Set bottom spacing for input fields
 
 	@include e('secure-label') {
 		
+		.fa {
+			margin-right: 3px;
+		}
+
 	}
 
 }

@@ -83,9 +83,53 @@
                 <div class="l-container">
                     <div class="c-hero">
                         <aside class="c-hero__aside">
-                            <h2 class="c-hero__heading">Add title here</h2>
-                            <p class="c-hero__text">Add text here</p>
-                            <a href="#donate" class="c-button c-button--primary c-button--large c-button--full" role="button" title="Donate now">Donate now</a>
+                            <div class="c-lead-gen">
+                                <form method="POST" class="leadgen">
+                                    <div class="c-lead-gen__header">
+                                         <h2 class="c-lead-gen__heading">Add signup title</h2>
+                                         <div class="c-totaliser">
+                                              <p class="c-totaliser__text">Join the <strong class="c-totaliser__total">0</strong> who have already</p>
+                                         </div>
+                                    </div>
+                                    <div class="c-lead-gen__form">
+                                        <div class="c-lead-gen__fields">
+                                            <div class="c-input c-input--inline c-input--inline-start">
+                                                <div class="c-input__field">
+                                                    <label class="c-input__field-label" for="firstname" title="First name">First name</label>
+                                                    <input class="c-input__field-input" type="text" placeholder="" value="" name="firstname" id="firstname" required />
+                                                </div>
+                                            </div>
+                                            <div class="c-input c-input--inline c-input--inline-end">
+                                                <div class="c-input__field">
+                                                    <label class="c-input__field-label" for="lastname" title="Last name">Last name</label>
+                                                    <input class="c-input__field-input" type="text" placeholder="" value="" name="lastname" id="lastname" required />
+                                                </div>
+                                            </div>
+                                            <div class="c-input">
+                                                <div class="c-input__field">
+                                                    <label class="c-input__field-label" for="email" title="Email address">Email address</label>
+                                                    <input class="c-input__field-input" type="email" placeholder="" value="" name="email" id="email" required />
+                                                </div>
+                                            </div>
+                                            <div class="c-checkbox">
+                                                <label class="c-checkbox__label is-hidden" for="opt-in" title="Would you like to recieve updates?">Would you like to recieve updates?</label>
+                                                <div class="c-checkbox__field">
+                                                    <label class="c-checkbox__field-label" for="opt-in" title="Yes, I would like to recieve email updates from The Freedom Campaign about their work.">
+                                                        <input class="c-checkbox__field-input" type="checkbox" value="Yes" id="opt-in" name="opt-in" />
+                                                        <span class="c-checkbox__field-text">Yes, I would like to recieve email updates from The Freedom Campaign about their work.</span>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="c-lead-gen__submit">
+                                            <input class="c-button c-button--primary c-button--large c-button--full" type="submit" value="Add your voice" id="submit" name="submit">
+                                        </div>
+                                    </div>
+                                    <div class="c-lead-gen__supporting">
+                                        <p class="c-lead-gen__supporting-text"><a href="/" class="c-lead-gen__supporting-link" title="Privacy Policy">Privacy Policy</a> ipsum dolor sit amet, consec tetur adpisicing elitsed do eiusmod.</p>
+                                    </div>
+                                </form>
+                            </div>
                         </aside>
                         <img class="c-hero__img" src="/" height="640" width="1400" alt=""/>
                     </div>
@@ -123,61 +167,11 @@
                                         <p class="c-quote__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
                                         <footer class="c-quote__name">Name Surname <cite class="c-quote__label" title="Organisation">Organisation</cite></footer>
                                     </blockquote>
-                                    <a href="#donate" class="c-button c-button--primary" role="button" title="Donate now">Donate now</a>
+                                    <a href="#donate" class="c-button c-button--primary" role="button" title="Add your voice">Add your voice</a>
                                 </article>
                             </div>
                         </div>
-                        <div class="l-grid__item">
-                            <aside id="signup">
-                                <div class="c-lead-gen">
-                                    <form method="POST" class="leadgen">
-                                        <div class="c-lead-gen__header">
-                                             <h2 class="c-lead-gen__heading">Add signup title</h2>
-                                             <div class="c-totaliser">
-                                                  <p class="c-totaliser__text">Join the <strong class="c-totaliser__total">0</strong> who have already</p>
-                                             </div>
-                                        </div>
-                                        <div class="c-lead-gen__form">
-                                            <div class="c-lead-gen__fields">
-                                                <div class="c-input c-input--inline c-input--inline-start">
-                                                    <div class="c-input__field">
-                                                        <label class="c-input__field-label" for="firstname" title="First name">First name</label>
-                                                        <input class="c-input__field-input" type="text" placeholder="" value="" name="firstname" id="firstname" required />
-                                                    </div>
-                                                </div>
-                                                <div class="c-input c-input--inline c-input--inline-end">
-                                                    <div class="c-input__field">
-                                                        <label class="c-input__field-label" for="lastname" title="Last name">Last name</label>
-                                                        <input class="c-input__field-input" type="text" placeholder="" value="" name="lastname" id="lastname" required />
-                                                    </div>
-                                                </div>
-                                                <div class="c-input">
-                                                    <div class="c-input__field">
-                                                        <label class="c-input__field-label" for="email" title="Email address">Email address</label>
-                                                        <input class="c-input__field-input" type="email" placeholder="" value="" name="email" id="email" required />
-                                                    </div>
-                                                </div>
-                                                <div class="c-checkbox">
-                                                    <label class="c-checkbox__label is-hidden" for="opt-in" title="Would you like to recieve updates?">Would you like to recieve updates?</label>
-                                                    <div class="c-checkbox__field">
-                                                        <label class="c-checkbox__field-label" for="opt-in" title="Yes, I would like to recieve email updates from The Freedom Campaign about their work.">
-                                                            <input class="c-checkbox__field-input" type="checkbox" value="Yes" id="opt-in" name="opt-in" />
-                                                            <span class="c-checkbox__field-text">Yes, I would like to recieve email updates from The Freedom Campaign about their work.</span>
-                                                        </label>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="c-lead-gen__submit">
-                                                <input class="c-button c-button--primary c-button--large c-button--full" type="submit" value="Send a message of hope" id="submit" name="submit">
-                                            </div>
-                                        </div>
-                                        <div class="c-lead-gen__supporting">
-                                            <p class="c-lead-gen__supporting-text"><a href="/" class="c-lead-gen__supporting-link" title="Privacy Policy">Privacy Policy</a> ipsum dolor sit amet, consec tetur adpisicing elitsed do eiusmod.</p>
-                                        </div>
-                                    </form>
-                                </div>
-                            </aside>
-                        </div>
+                        <div class="l-grid__item"></div>
                     </div>
                 </div>
             </div>
