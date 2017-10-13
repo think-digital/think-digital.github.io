@@ -1,14 +1,20 @@
 .c-hero {
-	@include flex-display;
-	@include flex-flow(row wrap);
 
-	@include e('aside') {
-		@include align-items(center);
-		@include flex(1);
+	@media only screen and (min-width: $small-break) {
 		@include flex-display;
 		@include flex-flow(row wrap);
-		@include flex-order(2);
+	}
+
+	@include e('aside') {
 		background-color: $panel;
+
+		@media only screen and (min-width: $small-break) {
+			@include align-items(center);
+			@include flex(1);
+			@include flex-display;
+			@include flex-flow(row wrap);
+			@include flex-order(2);
+		}
 
 		.the-freedom-campaign & {
 			background-color: #9B48A3;
@@ -18,14 +24,19 @@
 	}
 
 	@include e('wrap') {
-		padding: 40px;
+		padding: 20px;
+
+		@media only screen and (min-width: $small-break) {
+			padding: 40px;
+		}
+
 	}
 
 	@include e('heading') {
+		@include font-bold;
 		@include font-size(24);
 		@include line-height(28);
 		margin-bottom: 12px;
-		@include font-bold;
 	}
 
 	@include e('text') {
@@ -35,11 +46,16 @@
 	}
 
 	@include e('img') {
-		@include flex(2);
-		@include flex-order(1);
 		display: block;
-		background-color: black;
-		min-height: 480px;
+		background-color: black; 
+		min-height: 220px;
+
+		@media only screen and (min-width: $small-break) {
+			@include flex(2);
+			@include flex-order(1);
+			min-height: 480px;
+		}
+
 	}
 
 }

@@ -4,8 +4,13 @@
 	@include e('text') {
 		color: $primary;
 		@include font-bold;
-		@include font-size(24);
-		@include line-height(32);
+		@include font-size(18);
+		@include line-height(26);
+
+		@media only screen and (min-width: $small-break) {
+			@include font-size(24);
+			@include line-height(32);
+		}
 
 		.the-freedom-campaign & {
 			color: #9B48A3;

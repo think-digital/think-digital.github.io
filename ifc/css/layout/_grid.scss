@@ -1,16 +1,31 @@
 .l-grid {
-	@include flex-display;
-	@include flex-flow(row wrap);
+
+	@media only screen and (min-width: $small-break) {
+		@include flex-display;
+		@include flex-flow(row wrap);
+	}	
 
 	@include e('item') {
-		@include flex(1);
 
-		@include m('grow-2') {
-			@include flex(2);
+		@media only screen and (min-width: $small-break) {
+			@include flex(1);
+			@include flex-order(1);
 		}
 
-		@include m('grow-3') {
-			@include flex(2);
+		@include m('grow-2') {
+
+			@media only screen and (min-width: $small-break) {
+				@include flex(2);
+			}
+
+		}
+
+		@include m('desktop-first') {
+
+			@media only screen and (min-width: $small-break) {
+				@include flex-order(-1);
+			}
+
 		}
 
 	}

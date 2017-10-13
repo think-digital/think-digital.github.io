@@ -1,6 +1,10 @@
 .c-footer {
 	@include font-size(12);
-	@include font-size(14);
+	@include line-height(16);
+
+	@media only screen and (min-width: $small-break) {
+		@include font-size(14);
+	}
 
 	@include e('link') {
 		border-bottom: 1px solid $white;

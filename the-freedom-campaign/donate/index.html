@@ -12,7 +12,7 @@
     </script>
 
     <!-- so:meta -->
-    <title>The Freedom Campaign</title>
+    <title>Donate - The Freedom Campaign</title>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="description" content="" />
@@ -39,20 +39,20 @@
     <!-- eo:meta -->
 
     <!-- so:favicon -->
-    <link rel="apple-touch-icon" sizes="180x180" href="../ifc/favicons/apple-icon-180x180.png">
-    <link rel="icon" type="image/png" sizes="192x192" href="../ifc/favicons/android-icon-192x192.png">
-    <!--[if IE]><link rel="shortcut icon" type="image/x-icon" href="../ifc/favicons/favicon.ico" /><![endif]-->
+    <link rel="apple-touch-icon" sizes="180x180" href="../../ifc/favicons/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="../../ifc/favicons/android-icon-192x192.png">
+    <!--[if IE]><link rel="shortcut icon" type="image/x-icon" href="../../ifc/favicons/favicon.ico" /><![endif]-->
     <!-- eo:favicon -->
 
     <!-- so:stylesheets -->
-    <link rel="stylesheet" type="text/css" href="../ifc/css/app.css">
+    <link rel="stylesheet" type="text/css" href="../../ifc/css/app.css">
     <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css?family=Bitter:700|Open+Sans:400,600,700" rel="stylesheet">
     <!-- eo:stylesheets -->
 
     <!-- so:javascripts -->
     <!--[if (gte IE 6)&(lte IE 8)]>
-        <script type="text/javascript" src="../ifc/js/selectivizr.js"></script>
+        <script type="text/javascript" src="../../ifc/js/selectivizr.js"></script>
     <![endif]-->
     <!--[if lt IE 9]>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
@@ -71,7 +71,7 @@
         <header class="l-band l-band--header">
             <div class="l-container">
                 <div class="c-header">
-                    <img class="c-header__logo" src="img/logo.png" alt="The Freedom Campaign"/>
+                    <img class="c-header__logo" src="../img/logo.png" alt="The Freedom Campaign"/>
                 </div>
             </div>
         </header>
@@ -96,43 +96,10 @@
             <div id="content" class="l-band">
                 <div class="l-container">
                     <div class="l-grid">
-                        <div class="l-grid__item l-grid__item--grow-2">
-                            <div id="story">
-                                <article class="c-story">
-                                    <header class="c-story__header">
-                                        <h2 class="c-story__heading">Add heading here</h2>
-                                        <p class="c-story__lead">Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Duis mollis, est non commodo luctus.</p>
-                                    </header>
-                                    <p class="c-story__text">Nullam quis risus eget urna mollis ornare vel eu leo. Donec ullamcorper nulla non metus auctor fringilla. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Donec  ullamcorper nulla non metus auctor fringilla.</p>
-                                    <h3 class="c-story__sub-heading">Sub-heading</h3>
-                                    <p class="c-story__text">Maecenas sed diam eget risus varius <strong>bold</strong> blandit sit amet <em>italic</em> non magna. Donec id elit <u>underlined</u> non mi porta gravida at eget metus. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
-                                    <ul class="l-list l-list--unordered">
-                                        <li class="l-list__item">Lorem ipsum dolor sit amet</li>
-                                        <li class="l-list__item">Consectetur adipiscing elit</li>
-                                        <li class="l-list__item">Integer molestie lorem at massa</li>
-                                    </ul>
-                                    <ol class="l-list l-list--ordered">
-                                        <li class="l-list__item">Lorem ipsum dolor sit amet</li>
-                                        <li class="l-list__item">Consectetur adipiscing elit</li>
-                                        <li class="l-list__item">Integer molestie lorem at massa</li>
-                                    </ol>
-                                    <ul class="l-list l-list--unstyled">
-                                        <li class="l-list__item">Lorem ipsum dolor sit amet</li>
-                                        <li class="l-list__item">Consectetur adipiscing elit</li>
-                                        <li class="l-list__item">Integer molestie lorem at massa</li>
-                                    </ul>
-                                    <blockquote class="c-quote">
-                                        <p class="c-quote__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
-                                        <footer class="c-quote__name">Name Surname <cite class="c-quote__label" title="Organisation">Organisation</cite></footer>
-                                    </blockquote>
-                                    <a href="#donate" class="c-button c-button--primary" role="button" title="Donate now">Donate now</a>
-                                </article>
-                            </div>
-                        </div>
                         <div class="l-grid__item">
                             <aside id="donate">
                                 <div class="c-donation c-donation--stripe c-donation--oneoff">
-                                    <form method="POST" id="hf_oneoff_payment_form">
+                                    <form method="POST" id="hf_oneoff_payment_form" action="thank-you.html">
                                         <h2 class="c-donation__heading">Donate now</h2>
                                         <div class="c-donation__form">
                                             <div class="c-donation__amounts">
@@ -204,6 +171,39 @@
                                 </div>
                             </aside>
                         </div>
+                        <div class="l-grid__item l-grid__item--grow-2 l-grid__item--desktop-first">
+                            <div id="story">
+                                <article class="c-story">
+                                    <header class="c-story__header">
+                                        <h2 class="c-story__heading">Add heading here</h2>
+                                        <p class="c-story__lead">Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Duis mollis, est non commodo luctus.</p>
+                                    </header>
+                                    <p class="c-story__text">Nullam quis risus eget urna mollis ornare vel eu leo. Donec ullamcorper nulla non metus auctor fringilla. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Donec  ullamcorper nulla non metus auctor fringilla.</p>
+                                    <h3 class="c-story__sub-heading">Sub-heading</h3>
+                                    <p class="c-story__text">Maecenas sed diam eget risus varius <strong>bold</strong> blandit sit amet <em>italic</em> non magna. Donec id elit <u>underlined</u> non mi porta gravida at eget metus. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
+                                    <ul class="l-list l-list--unordered">
+                                        <li class="l-list__item">Lorem ipsum dolor sit amet</li>
+                                        <li class="l-list__item">Consectetur adipiscing elit</li>
+                                        <li class="l-list__item">Integer molestie lorem at massa</li>
+                                    </ul>
+                                    <ol class="l-list l-list--ordered">
+                                        <li class="l-list__item">Lorem ipsum dolor sit amet</li>
+                                        <li class="l-list__item">Consectetur adipiscing elit</li>
+                                        <li class="l-list__item">Integer molestie lorem at massa</li>
+                                    </ol>
+                                    <ul class="l-list l-list--unstyled">
+                                        <li class="l-list__item">Lorem ipsum dolor sit amet</li>
+                                        <li class="l-list__item">Consectetur adipiscing elit</li>
+                                        <li class="l-list__item">Integer molestie lorem at massa</li>
+                                    </ul>
+                                    <blockquote class="c-quote">
+                                        <p class="c-quote__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+                                        <footer class="c-quote__name">Name Surname <cite class="c-quote__label" title="Organisation">Organisation</cite></footer>
+                                    </blockquote>
+                                    <a href="#donate" class="c-button c-button--primary" role="button" title="Donate now">Donate now</a>
+                                </article>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -215,6 +215,32 @@
             <div class="l-container">
                 <div class="l-grid">
                     <div class="l-grid__item">
+                        <div class="c-follow">
+                            <ul class="l-list l-list--unstyled">
+                                <li class="l-list__item l-list__item--inline">
+                                    <a href="https://www.facebook.com" class="c-follow__icon c-follow__icon--facebook" target="_blank" title="Like on Facebook">
+                                        <i class="fa fa-facebook" aria-label="Facebook" aria-hidden="true"></i>
+                                    </a>
+                                </li>
+                                <li class="l-list__item l-list__item--inline">
+                                    <a href="https://twitter.com" class="c-follow__icon c-follow__icon--twitter" target="_blank" title="Follow on Twitter">
+                                        <i class="fa fa-twitter" aria-label="Twitter" aria-hidden="true"></i>
+                                    </a>
+                                </li>
+                                <li class="l-list__item l-list__item--inline">
+                                    <a href="https://instagram.com" class="c-follow__icon c-follow__icon--instagram" title="Follow on Instagram">
+                                        <i class="fa fa-instagram" aria-label="Instagram" aria-hidden="true"></i>
+                                    </a>
+                                </li>
+                                <li class="l-list__item l-list__item--inline">
+                                    <a href="https://youtube.com" class="c-follow__icon c-follow__icon--youtube" title="Subscribe on YouTube">
+                                        <i class="fa fa-youtube-play" aria-label="YouTube" aria-hidden="true"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="l-grid__item l-grid__item--desktop-first">
                         <div class="c-footer">
                             <ul class="l-list l-list--unstyled">
                                 <li class="l-list__item l-list__item--inline">
@@ -227,32 +253,6 @@
                             <p class="c-footer__text">Copyright &copy; 2017 The Freedom Campaign</p>
                         </div>
                     </div>
-                    <div class="l-grid__item">
-                        <div class="c-social c-social--follow">
-                            <ul class="l-list l-list--unstyled">
-                                <li class="l-list__item l-list__item--inline">
-                                    <a href="https://www.facebook.com" class="c-social__icon c-social__icon--facebook c-social__icon--large" target="_blank" title="Like on Facebook">
-                                        <i class="fa fa-facebook" aria-label="Facebook" aria-hidden="true"></i>
-                                    </a>
-                                </li>
-                                <li class="l-list__item l-list__item--inline">
-                                    <a href="https://twitter.com" class="c-social__icon c-social__icon--twitter c-social__icon--large" target="_blank" title="Follow on Twitter">
-                                        <i class="fa fa-twitter" aria-label="Twitter" aria-hidden="true"></i>
-                                    </a>
-                                </li>
-                                <li class="l-list__item l-list__item--inline">
-                                    <a href="https://instagram.com" class="c-social__icon c-social__icon--instagram c-social__icon--large" title="Follow on Instagram">
-                                        <i class="fa fa-instagram" aria-label="Instagram" aria-hidden="true"></i>
-                                    </a>
-                                </li>
-                                <li class="l-list__item l-list__item--inline">
-                                    <a href="https://youtube.com" class="c-social__icon c-social__icon--youtube c-social__icon--large" title="Subscribe on YouTube">
-                                        <i class="fa fa-youtube-play" aria-label="YouTube" aria-hidden="true"></i>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
                 </div>
             </div>
         </footer>
@@ -262,8 +262,8 @@
     <!-- eo:page -->
 
     <!-- so:javascripts -->
-    <!-- <script type="text/javascript" src="../ifc/js/jquery.js"></script>
-    <script type="text/javascript" src="../ifc/js/app.js"></script> -->
+    <!-- <script type="text/javascript" src="../../ifc/js/jquery.js"></script>
+    <script type="text/javascript" src="../../ifc/js/app.js"></script> -->
     <!-- eo:javascripts -->
 
 </body>

@@ -61,14 +61,6 @@
 
 		}
 
-		&:focus ~ * {
-
-			&:after {
-				border-color: $black;
-			}
-
-		}
-
 		&:checked ~ * {
 
 			&:after {

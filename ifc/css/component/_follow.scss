@@ -1,28 +1,16 @@
-.c-social {
+.c-follow {
 
-	@include m('follow') {
+	@media only screen and (min-width: $small-break) {
 		text-align: right;
-	}
-
-	@include m('share') {
-		
 	}
 
 	@include e('icon') {
 		color: $white;
-		@include font-size(28);
+		@include font-size(24);
 		margin: 0 5px;
-	
-		@include m('large') {
-			
-		}
 
-		@include m('round') {
-			
-		}
-
-		@include m('outline') {
-			
+		@media only screen and (min-width: $small-break) {
+			@include font-size(28);
 		}
 
 		@include m('email') {
