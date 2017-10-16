@@ -1,5 +1,22 @@
 body {
 	background-color: #f6f6f6;
+
+	&.disaster-response-international {
+		background-color: #39A996;
+	}
+
+	&.enough-for-all {
+		background-color: $enough-for-all-supporting;
+	}
+
+	&.orangutans-forever {
+		background-color: $orangutans-forever-supporting;
+	}
+
+	&.the-freedom-campaign {
+		background-color: $the-freedom-campaign-supporting;
+	}
+
 }
 
 .l-page {

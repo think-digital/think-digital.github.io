@@ -39,8 +39,20 @@
 				background-color: $white;
 				color: $primary;
 
+				.disaster-response-international & {
+					color: $disaster-response-international;
+				}
+
+				.enough-for-all & {
+					color: $enough-for-all;
+				}
+
+				.orangutans-forever & {
+					color: $orangutans-forever;
+				}
+
 				.the-freedom-campaign & {
-					color: #9B48A3;
+					color: $the-freedom-campaign;
 				}
 
 			}
@@ -50,11 +62,7 @@
 		@include m('email') {
 			
 			&:hover {
-
-				.the-freedom-campaign & {
-					
-				}
-
+				
 			}
 
 		}

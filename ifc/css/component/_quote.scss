@@ -12,8 +12,20 @@
 			@include line-height(32);
 		}
 
+		.disaster-response-international & {
+			color: $disaster-response-international-supporting;
+		}
+
+		.enough-for-all & {
+			color: $enough-for-all;
+		}
+
+		.orangutans-forever & {
+			color: $orangutans-forever;
+		}
+
 		.the-freedom-campaign & {
-			color: #9B48A3;
+			color: $the-freedom-campaign;
 		}
 
 		// Add quote marks
@@ -42,8 +54,20 @@
 		margin: 8px 0 0;
 		padding: 0 0 0 10px;
 
+		.disaster-response-international & {
+			border-color: $disaster-response-international-supporting;
+		}
+
+		.enough-for-all & {
+			border-color: $enough-for-all;
+		}
+
+		.orangutans-forever & {
+			border-color: $orangutans-forever;
+		}
+
 		.the-freedom-campaign & {
-			border-color: #9B48A3;
+			border-color: $the-freedom-campaign;
 		}
 
 	}

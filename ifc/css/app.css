@@ -104,6 +104,14 @@ img {
   @media only screen and (min-width: 768px) {
     .l-band--footer {
       padding: 40px; } }
+  .disaster-response-international .l-band--footer {
+    background-color: #000; }
+  .enough-for-all .l-band--footer {
+    background-color: #000; }
+  .orangutans-forever .l-band--footer {
+    background-color: #E68237; }
+  .the-freedom-campaign .l-band--footer {
+    background-color: #9B48A3; }
 
 .l-container {
   margin: 0 auto;
@@ -178,6 +186,14 @@ img {
 
 body {
   background-color: #f6f6f6; }
+  body.disaster-response-international {
+    background-color: #39A996; }
+  body.enough-for-all {
+    background-color: #FFCC77; }
+  body.orangutans-forever {
+    background-color: #7ED371; }
+  body.the-freedom-campaign {
+    background-color: #BA71C2; }
 
 .l-page {
   background-color: #fff;
@@ -208,7 +224,7 @@ body {
   -moz-border-radius: 4px;
   border-radius: 4px;
   display: inline-block;
-  font-family: 'Bitter', serif;
+  font-family: 'Open Sans', sans-serif;
   font-size: 18px;
   font-size: 1.8rem;
   line-height: 48px;
@@ -224,6 +240,19 @@ body {
   .lt-ie8 .c-button {
     display: inline;
     zoom: 1; }
+  .disaster-response-international .c-button {
+    font-family: 'Archivo Black', sans-serif;
+    font-weight: normal; }
+  .enough-for-all .c-button {
+    font-family: 'Francois One', sans-serif;
+    font-weight: normal; }
+  .orangutans-forever .c-button {
+    font-family: 'Anton', serif;
+    font-weight: normal;
+    letter-spacing: 0.25px; }
+  .the-freedom-campaign .c-button {
+    font-family: 'Bitter', serif;
+    font-weight: bold; }
   @media only screen and (min-width: 768px) {
     .c-button {
       width: auto; } }
@@ -244,6 +273,13 @@ body {
   .c-button--primary {
     background-color: #2dcc70;
     color: #fff; }
+    .disaster-response-international .c-button--primary {
+      background-color: #D0021B; }
+    .enough-for-all .c-button--primary {
+      background-color: #F5A623;
+      color: #222; }
+    .orangutans-forever .c-button--primary {
+      background-color: #E68237; }
     .the-freedom-campaign .c-button--primary {
       background-color: #9B48A3; }
   .c-button--secondary {
@@ -253,9 +289,19 @@ body {
     background: none;
     border: 2px solid #fff;
     color: #fff; }
+    .enough-for-all .c-button--outline {
+      border: 2px solid #000;
+      color: #000; }
     .c-button--outline:hover {
       background-color: #fff;
       color: #2dcc70; }
+      .disaster-response-international .c-button--outline:hover {
+        color: #D0021B; }
+      .enough-for-all .c-button--outline:hover {
+        background-color: #000;
+        color: #F5A623; }
+      .orangutans-forever .c-button--outline:hover {
+        color: #E68237; }
       .the-freedom-campaign .c-button--outline:hover {
         color: #9B48A3; }
 
@@ -273,18 +319,52 @@ body {
       margin-right: 40px;
       padding: 40px; } }
   .c-donation__heading {
-    font-family: 'Bitter', serif;
+    font-family: 'Open Sans', sans-serif;
     font-size: 28px;
     font-size: 2.8rem;
     line-height: 36px;
     line-height: 3.6rem;
     margin-bottom: 12px; }
+    .disaster-response-international .c-donation__heading {
+      font-family: 'Archivo Black', sans-serif;
+      font-weight: normal; }
+    .enough-for-all .c-donation__heading {
+      font-family: 'Francois One', sans-serif;
+      font-weight: normal; }
+    .orangutans-forever .c-donation__heading {
+      font-family: 'Anton', serif;
+      font-weight: normal;
+      letter-spacing: 0.25px; }
+    .the-freedom-campaign .c-donation__heading {
+      font-family: 'Bitter', serif;
+      font-weight: bold; }
+    .disaster-response-international .c-donation__heading {
+      color: #D0021B; }
+    .enough-for-all .c-donation__heading {
+      color: #000; }
+    .orangutans-forever .c-donation__heading {
+      color: #E68237; }
+    .the-freedom-campaign .c-donation__heading {
+      color: #9B48A3; }
   .c-donation__sub-heading {
-    font-family: 'Bitter', serif;
+    font-family: 'Open Sans', sans-serif;
     display: block;
     margin-bottom: 12px; }
+    .disaster-response-international .c-donation__sub-heading {
+      font-family: 'Archivo Black', sans-serif;
+      font-weight: normal; }
+    .enough-for-all .c-donation__sub-heading {
+      font-family: 'Francois One', sans-serif;
+      font-weight: normal; }
+    .orangutans-forever .c-donation__sub-heading {
+      font-family: 'Anton', serif;
+      font-weight: normal;
+      letter-spacing: 0.25px; }
+    .the-freedom-campaign .c-donation__sub-heading {
+      font-family: 'Bitter', serif;
+      font-weight: bold; }
   .c-donation__amount-label {
-    font-family: 'Bitter', serif;
+    font-family: 'Open Sans', sans-serif;
     font-size: 16px;
     font-size: 1.6rem;
     line-height: 48px;
@@ -299,10 +379,19 @@ body {
     text-decoration: none;
     vertical-align: middle;
     width: 100%; }
-    @media only screen and (min-width: 768px) {
-      .c-donation__amount-label {
-        font-size: 18px;
-        font-size: 1.8rem; } }
+    .disaster-response-international .c-donation__amount-label {
+      font-family: 'Archivo Black', sans-serif;
+      font-weight: normal; }
+    .enough-for-all .c-donation__amount-label {
+      font-family: 'Francois One', sans-serif;
+      font-weight: normal; }
+    .orangutans-forever .c-donation__amount-label {
+      font-family: 'Anton', serif;
+      font-weight: normal;
+      letter-spacing: 0.25px; }
+    .the-freedom-campaign .c-donation__amount-label {
+      font-family: 'Bitter', serif;
+      font-weight: bold; }
     .l-list__item--tab:first-child .c-donation__amount-label {
       -webkit-border-radius: 4px 0 0 4px;
       -moz-border-radius: 4px 0 0 4px;
@@ -314,6 +403,12 @@ body {
       border-right: 1px solid #b0b0b0; }
     .c-donation__amount-label:hover {
       cursor: pointer; }
+    .disaster-response-international .c-donation__amount-label {
+      color: #D0021B; }
+    .enough-for-all .c-donation__amount-label {
+      color: #F5A623; }
+    .orangutans-forever .c-donation__amount-label {
+      color: #E68237; }
     .the-freedom-campaign .c-donation__amount-label {
       color: #9B48A3; }
   .c-donation__amount-radio {
@@ -335,9 +430,21 @@ body {
       background-color: #2dcc70;
       color: #fff;
       display: block; }
+      .disaster-response-international .c-donation__amount-radio:focus ~ *, .disaster-response-international
+      .c-donation__amount-radio:checked ~ * {
+        background-color: #D0021B; }
+      .enough-for-all .c-donation__amount-radio:focus ~ *, .enough-for-all
+      .c-donation__amount-radio:checked ~ * {
+        background-color: #F5A623;
+        color: #222; }
+      .orangutans-forever .c-donation__amount-radio:focus ~ *, .orangutans-forever
+      .c-donation__amount-radio:checked ~ * {
+        background-color: #E68237; }
       .the-freedom-campaign .c-donation__amount-radio:focus ~ *, .the-freedom-campaign
       .c-donation__amount-radio:checked ~ * {
         background-color: #9B48A3; }
+  .c-donation__amount-currency {
+    font-weight: normal; }
   .c-donation__amount-desc {
     display: none; }
   .c-donation__other {
@@ -356,7 +463,7 @@ body {
     -webkit-flex-flow: row;
     -ms-flex-flow: row;
     flex-flow: row;
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-family: 'Open Sans', sans-serif;
     font-weight: 500;
     font-size: 18px;
     font-size: 1.8rem;
@@ -371,10 +478,23 @@ body {
     vertical-align: middle;
     width: auto; }
   .c-donation__other-currency {
-    font-family: 'Bitter', serif;
+    font-family: 'Open Sans', sans-serif;
     margin: 0 5px 0 15px;
     position: relative;
     top: -1px; }
+    .disaster-response-international .c-donation__other-currency {
+      font-family: 'Archivo Black', sans-serif;
+      font-weight: normal; }
+    .enough-for-all .c-donation__other-currency {
+      font-family: 'Francois One', sans-serif;
+      font-weight: normal; }
+    .orangutans-forever .c-donation__other-currency {
+      font-family: 'Anton', serif;
+      font-weight: normal;
+      letter-spacing: 0.25px; }
+    .the-freedom-campaign .c-donation__other-currency {
+      font-family: 'Bitter', serif;
+      font-weight: bold; }
   .c-donation__other-input {
     -webkit-appearance: textfield;
     -moz-appearance: textfield;
@@ -405,12 +525,25 @@ body {
       margin-right: 40px;
       padding: 40px; } }
   .c-feed__heading {
-    font-family: 'Bitter', serif;
+    font-family: 'Open Sans', sans-serif;
     font-size: 18px;
     font-size: 1.8rem;
     line-height: 26px;
     line-height: 2.6rem;
     margin-bottom: 12px; }
+    .disaster-response-international .c-feed__heading {
+      font-family: 'Archivo Black', sans-serif;
+      font-weight: normal; }
+    .enough-for-all .c-feed__heading {
+      font-family: 'Francois One', sans-serif;
+      font-weight: normal; }
+    .orangutans-forever .c-feed__heading {
+      font-family: 'Anton', serif;
+      font-weight: normal;
+      letter-spacing: 0.25px; }
+    .the-freedom-campaign .c-feed__heading {
+      font-family: 'Bitter', serif;
+      font-weight: bold; }
   .c-feed__list {
     list-style: none; }
   .c-feed__item {
@@ -427,7 +560,7 @@ body {
   .c-checkbox__label {
     font-size: 14px;
     font-size: 1.4rem;
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-family: 'Open Sans', sans-serif;
     font-weight: 500;
     display: block;
     margin-bottom: 12px; }
@@ -491,7 +624,7 @@ body {
   .c-input__field-label {
     font-size: 14px;
     font-size: 1.4rem;
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-family: 'Open Sans', sans-serif;
     font-weight: 500;
     display: block;
     margin-bottom: 8px; }
@@ -502,7 +635,7 @@ body {
     -webkit-border-radius: 4px;
     -moz-border-radius: 4px;
     border-radius: 4px;
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-family: 'Open Sans', sans-serif;
     font-weight: 500;
     font-size: 16px;
     font-size: 1.6rem;
@@ -540,13 +673,20 @@ body {
   color: #fff;
   font-size: 24px;
   font-size: 2.4rem;
-  margin: 0 5px; }
+  margin: 0 5px;
+  text-decoration: none; }
   @media only screen and (min-width: 768px) {
     .c-follow__icon {
       font-size: 28px;
       font-size: 2.8rem; } }
   .c-follow__icon--email:hover {
     color: #2dcc70; }
+    .disaster-response-international .c-follow__icon--email:hover {
+      color: #D0021B; }
+    .enough-for-all .c-follow__icon--email:hover {
+      color: #F5A623; }
+    .orangutans-forever .c-follow__icon--email:hover {
+      color: #E68237; }
     .the-freedom-campaign .c-follow__icon--email:hover {
       color: #9B48A3; }
   .c-follow__icon--facebook:hover {
@@ -581,6 +721,9 @@ body {
       text-align: left; } }
   .c-header__logo {
     max-height: 64px; }
+    .enough-for-all .c-header__logo,
+    .orangutans-forever .c-header__logo {
+      max-height: 84px; }
 
 @media only screen and (min-width: 768px) {
   .c-hero {
@@ -612,6 +755,15 @@ body {
       -webkit-order: 2;
       -ms-order: 2;
       order: 2; } }
+  .disaster-response-international .c-hero__aside {
+    background-color: #D0021B;
+    color: #fff; }
+  .enough-for-all .c-hero__aside {
+    background-color: #F5A623;
+    color: #000; }
+  .orangutans-forever .c-hero__aside {
+    background-color: #E68237;
+    color: #fff; }
   .the-freedom-campaign .c-hero__aside {
     background-color: #9B48A3;
     color: #fff; }
@@ -623,12 +775,25 @@ body {
       padding: 40px; } }
 
 .c-hero__heading {
-  font-family: 'Bitter', serif;
+  font-family: 'Open Sans', sans-serif;
   font-size: 24px;
   font-size: 2.4rem;
   line-height: 28px;
   line-height: 2.8rem;
   margin-bottom: 12px; }
+  .disaster-response-international .c-hero__heading {
+    font-family: 'Archivo Black', sans-serif;
+    font-weight: normal; }
+  .enough-for-all .c-hero__heading {
+    font-family: 'Francois One', sans-serif;
+    font-weight: normal; }
+  .orangutans-forever .c-hero__heading {
+    font-family: 'Anton', serif;
+    font-weight: normal;
+    letter-spacing: 0.25px; }
+  .the-freedom-campaign .c-hero__heading {
+    font-family: 'Bitter', serif;
+    font-weight: bold; }
 
 .c-hero__text {
   font-size: 18px;
@@ -640,7 +805,8 @@ body {
 .c-hero__img {
   display: block;
   background-color: black;
-  min-height: 220px; }
+  min-height: 220px;
+  width: 100%; }
   @media only screen and (min-width: 768px) {
     .c-hero__img {
       -webkit-flex: 2;
@@ -659,12 +825,25 @@ body {
     .c-lead-gen {
       padding: 40px; } }
   .c-lead-gen__heading {
-    font-family: 'Bitter', serif;
+    font-family: 'Open Sans', sans-serif;
     font-size: 28px;
     font-size: 2.8rem;
     line-height: 36px;
     line-height: 3.6rem;
     margin-bottom: 8px; }
+    .disaster-response-international .c-lead-gen__heading {
+      font-family: 'Archivo Black', sans-serif;
+      font-weight: normal; }
+    .enough-for-all .c-lead-gen__heading {
+      font-family: 'Francois One', sans-serif;
+      font-weight: normal; }
+    .orangutans-forever .c-lead-gen__heading {
+      font-family: 'Anton', serif;
+      font-weight: normal;
+      letter-spacing: 0.25px; }
+    .the-freedom-campaign .c-lead-gen__heading {
+      font-family: 'Bitter', serif;
+      font-weight: bold; }
   .c-lead-gen__supporting {
     margin-top: 20px; }
   .c-lead-gen__supporting-text {
@@ -680,17 +859,36 @@ body {
   margin-bottom: 30px; }
   .c-quote__text {
     color: #2dcc70;
-    font-family: 'Bitter', serif;
+    font-family: 'Open Sans', sans-serif;
     font-size: 18px;
     font-size: 1.8rem;
     line-height: 26px;
     line-height: 2.6rem; }
+    .disaster-response-international .c-quote__text {
+      font-family: 'Archivo Black', sans-serif;
+      font-weight: normal; }
+    .enough-for-all .c-quote__text {
+      font-family: 'Francois One', sans-serif;
+      font-weight: normal; }
+    .orangutans-forever .c-quote__text {
+      font-family: 'Anton', serif;
+      font-weight: normal;
+      letter-spacing: 0.25px; }
+    .the-freedom-campaign .c-quote__text {
+      font-family: 'Bitter', serif;
+      font-weight: bold; }
     @media only screen and (min-width: 768px) {
       .c-quote__text {
         font-size: 24px;
         font-size: 2.4rem;
         line-height: 32px;
         line-height: 3.2rem; } }
+    .disaster-response-international .c-quote__text {
+      color: #189E88; }
+    .enough-for-all .c-quote__text {
+      color: #F5A623; }
+    .orangutans-forever .c-quote__text {
+      color: #E68237; }
     .the-freedom-campaign .c-quote__text {
       color: #9B48A3; }
     .c-quote__text:before, .c-quote__text:after {
@@ -712,6 +910,12 @@ body {
     line-height: 1.8rem;
     margin: 8px 0 0;
     padding: 0 0 0 10px; }
+    .disaster-response-international .c-quote__name {
+      border-color: #189E88; }
+    .enough-for-all .c-quote__name {
+      border-color: #F5A623; }
+    .orangutans-forever .c-quote__name {
+      border-color: #E68237; }
     .the-freedom-campaign .c-quote__name {
       border-color: #9B48A3; }
   .c-quote__label {
@@ -721,12 +925,25 @@ body {
     opacity: 0.75; }
 
 .c-share__heading {
-  font-family: 'Bitter', serif;
+  font-family: 'Open Sans', sans-serif;
   font-size: 18px;
   font-size: 1.8rem;
   line-height: 26px;
   line-height: 2.6rem;
   margin-bottom: 12px; }
+  .disaster-response-international .c-share__heading {
+    font-family: 'Archivo Black', sans-serif;
+    font-weight: normal; }
+  .enough-for-all .c-share__heading {
+    font-family: 'Francois One', sans-serif;
+    font-weight: normal; }
+  .orangutans-forever .c-share__heading {
+    font-family: 'Anton', serif;
+    font-weight: normal;
+    letter-spacing: 0.25px; }
+  .the-freedom-campaign .c-share__heading {
+    font-family: 'Bitter', serif;
+    font-weight: bold; }
 
 .c-share__icon {
   font-size: 28px;
@@ -769,6 +986,12 @@ body {
     .c-share__icon--outline:hover {
       background-color: #fff;
       color: #2dcc70; }
+      .disaster-response-international .c-share__icon--outline:hover {
+        color: #D0021B; }
+      .enough-for-all .c-share__icon--outline:hover {
+        color: #F5A623; }
+      .orangutans-forever .c-share__icon--outline:hover {
+        color: #E68237; }
       .the-freedom-campaign .c-share__icon--outline:hover {
         color: #9B48A3; }
 
@@ -792,16 +1015,58 @@ body {
     line-height: 32px;
     line-height: 3.2rem;
     margin-bottom: 20px;
-    font-family: 'Bitter', serif; }
+    font-family: 'Open Sans', sans-serif; }
+    .disaster-response-international .c-story__heading {
+      font-family: 'Archivo Black', sans-serif;
+      font-weight: normal; }
+    .enough-for-all .c-story__heading {
+      font-family: 'Francois One', sans-serif;
+      font-weight: normal; }
+    .orangutans-forever .c-story__heading {
+      font-family: 'Anton', serif;
+      font-weight: normal;
+      letter-spacing: 0.25px; }
+    .the-freedom-campaign .c-story__heading {
+      font-family: 'Bitter', serif;
+      font-weight: bold; }
     @media only screen and (min-width: 768px) {
       .c-story__heading {
         font-size: 28px;
         font-size: 2.8rem;
         line-height: 36px;
         line-height: 3.6rem; } }
+    .disaster-response-international .c-story__heading {
+      color: #189E88; }
+    .enough-for-all .c-story__heading {
+      color: #F5A623; }
+    .orangutans-forever .c-story__heading {
+      color: #E68237; }
+    .the-freedom-campaign .c-story__heading {
+      color: #9B48A3; }
   .c-story__sub-heading {
-    font-family: 'Bitter', serif;
+    font-family: 'Open Sans', sans-serif;
     margin-bottom: 12px; }
+    .disaster-response-international .c-story__sub-heading {
+      font-family: 'Archivo Black', sans-serif;
+      font-weight: normal; }
+    .enough-for-all .c-story__sub-heading {
+      font-family: 'Francois One', sans-serif;
+      font-weight: normal; }
+    .orangutans-forever .c-story__sub-heading {
+      font-family: 'Anton', serif;
+      font-weight: normal;
+      letter-spacing: 0.25px; }
+    .the-freedom-campaign .c-story__sub-heading {
+      font-family: 'Bitter', serif;
+      font-weight: bold; }
+    .disaster-response-international .c-story__sub-heading {
+      color: #189E88; }
+    .enough-for-all .c-story__sub-heading {
+      color: #000; }
+    .orangutans-forever .c-story__sub-heading {
+      color: #E68237; }
+    .the-freedom-campaign .c-story__sub-heading {
+      color: #9B48A3; }
   .c-story__lead {
     font-size: 18px;
     font-size: 1.8rem;

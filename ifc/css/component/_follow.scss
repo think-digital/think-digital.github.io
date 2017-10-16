@@ -8,6 +8,7 @@
 		color: $white;
 		@include font-size(24);
 		margin: 0 5px;
+		text-decoration: none;
 
 		@media only screen and (min-width: $small-break) {
 			@include font-size(28);
@@ -18,8 +19,20 @@
 			&:hover {
 				color: $primary;
 
+				.disaster-response-international & {
+					color: $disaster-response-international;
+				}
+
+				.enough-for-all & {
+					color: $enough-for-all;
+				}
+
+				.orangutans-forever & {
+					color: $orangutans-forever;
+				}
+
 				.the-freedom-campaign & {
-					color: #9B48A3;
+					color: $the-freedom-campaign;
 				}
 
 			}

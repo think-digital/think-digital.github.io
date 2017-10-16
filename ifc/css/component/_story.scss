@@ -25,11 +25,44 @@
 			@include line-height(36);
 		}
 
+		.disaster-response-international & {
+			color: $disaster-response-international-supporting;
+		}
+
+		.enough-for-all & {
+			color: $enough-for-all;
+		}
+
+		.orangutans-forever & {
+			color: $orangutans-forever;
+		}
+
+		.the-freedom-campaign & {
+			color: $the-freedom-campaign;
+		}
+
 	}
 
 	@include e('sub-heading') {
 		@include font-bold;
 		margin-bottom: 12px;
+
+		.disaster-response-international & {
+			color: $disaster-response-international-supporting;
+		}
+
+		.enough-for-all & {
+			color: $black;
+		}
+
+		.orangutans-forever & {
+			color: $orangutans-forever;
+		}
+
+		.the-freedom-campaign & {
+			color: $the-freedom-campaign;
+		}
+
 	}
 
 	@include e('lead') {

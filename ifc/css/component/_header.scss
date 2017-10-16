@@ -7,6 +7,12 @@
 
 	@include e('logo') {
 		max-height: 64px;
+
+		.enough-for-all &,
+		.orangutans-forever & {
+			max-height: 84px;
+		}
+
 	}
 
 }

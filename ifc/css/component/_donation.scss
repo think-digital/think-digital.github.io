@@ -37,6 +37,23 @@ $input-margin-outer-bottom: $spacing; // Set bottom spacing for input fields
 		@include font-size(28);
 		@include line-height(36);
 		margin-bottom: 12px;
+
+		.disaster-response-international & {
+			color: $disaster-response-international;
+		}
+
+		.enough-for-all & {
+			color: $black;
+		}
+
+		.orangutans-forever & {
+			color: $orangutans-forever;
+		}
+
+		.the-freedom-campaign & {
+			color: $the-freedom-campaign;
+		}
+
 	}
 	
 	@include e('sub-heading') {
@@ -60,10 +77,6 @@ $input-margin-outer-bottom: $spacing; // Set bottom spacing for input fields
 		vertical-align: middle;
 		width: 100%;
 
-		@media only screen and (min-width: $small-break) {
-			@include font-size(18);
-		}
-
 		.l-list__item--tab:first-child & {
 			@include border-radius(4px 0 0 4px);
 		}
@@ -77,8 +90,20 @@ $input-margin-outer-bottom: $spacing; // Set bottom spacing for input fields
 			cursor: pointer;
 		}
 
+		.disaster-response-international & {
+			color: $disaster-response-international;
+		}
+
+		.enough-for-all & {
+			color: $enough-for-all;
+		}
+
+		.orangutans-forever & {
+			color: $orangutans-forever;
+		}
+
 		.the-freedom-campaign & {
-			color: #9B48A3;
+			color: $the-freedom-campaign;
 		}
 
 	}
@@ -104,8 +129,21 @@ $input-margin-outer-bottom: $spacing; // Set bottom spacing for input fields
 			color: $white;
 			display: block;
 
+			.disaster-response-international & {
+				background-color: $disaster-response-international;
+			}
+
+			.enough-for-all & {
+				background-color: $enough-for-all;
+				color: #222;
+			}
+
+			.orangutans-forever & {
+				background-color: $orangutans-forever;
+			}
+
 			.the-freedom-campaign & {
-				background-color: #9B48A3;
+				background-color: $the-freedom-campaign;
 			}
 
 		}
@@ -117,7 +155,7 @@ $input-margin-outer-bottom: $spacing; // Set bottom spacing for input fields
 	}
 	
 	@include e('amount-currency') {
-		
+		font-weight: normal;
 	}
 	
 	@include e('amount-desc') {

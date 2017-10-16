@@ -48,6 +48,16 @@ $twitter: #1da1f2;
 $whatsapp: #25d366;
 $youtube: #cd201f;
 
+
+$disaster-response-international: #D0021B;
+$disaster-response-international-supporting: #189E88;
+$enough-for-all: #F5A623;
+$enough-for-all-supporting: #FFCC77;
+$orangutans-forever: #E68237;
+$orangutans-forever-supporting: #7ED371;
+$the-freedom-campaign: #9B48A3;
+$the-freedom-campaign-supporting: #BA71C2;
+
 // Fonts
 
 // @font-face { 
@@ -60,10 +70,32 @@ $youtube: #cd201f;
 }
 
 @mixin font-semibold {
-	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-family: 'Open Sans', sans-serif;
 	font-weight: 500;
 }
 
 @mixin font-bold {
-	font-family: 'Bitter', serif;
+	font-family: 'Open Sans', sans-serif;
+
+	.disaster-response-international & {
+		font-family: 'Archivo Black', sans-serif;
+		font-weight: normal;
+	}
+
+	.enough-for-all & {
+		font-family: 'Francois One', sans-serif;
+		font-weight: normal;
+	}
+
+	.orangutans-forever & {
+		font-family: 'Anton', serif;
+		font-weight: normal;
+		letter-spacing: 0.25px;
+	}
+
+	.the-freedom-campaign & {
+		font-family: 'Bitter', serif;
+		font-weight: bold;
+	}
+
 }
