@@ -28,7 +28,7 @@
 		}
 
 		@include m('tab') {
-			@include flex(1);
+			@include flex(1 0 auto);
 		}
 		
 	}
