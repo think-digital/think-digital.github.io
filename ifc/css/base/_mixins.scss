@@ -135,6 +135,7 @@
 
 // Flexbox display (flex or inline-flex) 
 @mixin flex-display($display: flex) {
+	-js-display: flex;
 	display: -webkit-#{$display};
 	display: -ms-#{$display}box;
 	display: -ms-#{$display};
