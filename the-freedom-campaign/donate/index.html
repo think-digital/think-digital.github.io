@@ -99,7 +99,7 @@
                         <div class="l-grid__item">
                             <aside id="donate">
                                 <div class="c-donation c-donation--stripe c-donation--oneoff">
-                                    <form method="POST" id="hf_oneoff_payment_form" action="thank-you">
+                                    <form method="POST" id="hf_oneoff_payment_form">
                                         <h2 class="c-donation__heading">Donate now</h2>
                                         <div class="c-donation__form">
                                             <div class="c-donation__amounts">
@@ -159,7 +159,7 @@
                                                 </div>
                                             </div>
                                             <div class="c-donation__submit">
-                                                <input class="c-button c-button--primary c-button--large c-button--full" type="submit" value="Make donation" id="submit" name="submit">
+                                                <input onclick="location.href='thank-you';" class="c-button c-button--primary c-button--large c-button--full" type="submit" value="Make donation" id="submit" name="submit">
                                             </div>
                                             <div class="c-donation__footnote">
                                                 <div class="c-donation__secure">
