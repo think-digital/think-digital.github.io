@@ -831,6 +831,7 @@ body {
     -webkit-justify-content: center;
     -ms-justify-content: center;
     justify-content: center;
+    background-color: #000;
     position: relative;
     overflow: hidden; } }
 

@@ -77,6 +77,7 @@
 			@include flex-flow(row wrap);
 			@include flex-order(1);
 			@include justify-content(center);
+			background-color: $black;
 			position: relative;
 			overflow: hidden;
 		}
