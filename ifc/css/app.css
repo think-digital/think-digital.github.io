@@ -725,19 +725,22 @@ body {
     .orangutans-forever .c-header__logo {
       max-height: 84px; }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 992px) {
   .c-hero {
     display: -webkit-flex;
     display: -ms-flexbox;
     display: -ms-flex;
     display: flex;
-    -webkit-flex-flow: row wrap;
-    -ms-flex-flow: row wrap;
-    flex-flow: row wrap; } }
+    -webkit-flex-flow: row;
+    -ms-flex-flow: row;
+    flex-flow: row;
+    -webkit-justify-content: space-around;
+    -ms-justify-content: space-around;
+    justify-content: space-around; } }
 
 .c-hero__aside {
   background-color: #e3e3e3; }
-  @media only screen and (min-width: 768px) {
+  @media only screen and (min-width: 992px) {
     .c-hero__aside {
       -webkit-align-items: center;
       -ms-align-items: center;
@@ -767,10 +770,15 @@ body {
   .the-freedom-campaign .c-hero__aside {
     background-color: #9B48A3;
     color: #fff; }
+  .disaster-response-international.leadgen .c-hero__aside,
+  .enough-for-all.leadgen .c-hero__aside,
+  .orangutans-forever.leadgen .c-hero__aside,
+  .the-freedom-campaign.leadgen .c-hero__aside {
+    background-color: #e3e3e3; }
 
 .c-hero__wrap {
   padding: 20px; }
-  @media only screen and (min-width: 768px) {
+  @media only screen and (min-width: 992px) {
     .c-hero__wrap {
       padding: 40px; } }
 
@@ -802,20 +810,39 @@ body {
   line-height: 2.4rem;
   margin-bottom: 24px; }
 
-.c-hero__img {
-  display: block;
-  background-color: black;
-  min-height: 220px;
-  width: 100%; }
-  @media only screen and (min-width: 768px) {
-    .c-hero__img {
-      -webkit-flex: 2;
-      -ms-flex: 2;
-      flex: 2;
-      -webkit-order: 1;
-      -ms-order: 1;
-      order: 1;
-      min-height: 480px; } }
+@media only screen and (min-width: 992px) {
+  .c-hero__main {
+    -webkit-align-items: center;
+    -ms-align-items: center;
+    align-items: center;
+    -webkit-flex: 2;
+    -ms-flex: 2;
+    flex: 2;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: -ms-flex;
+    display: flex;
+    -webkit-flex-flow: row wrap;
+    -ms-flex-flow: row wrap;
+    flex-flow: row wrap;
+    -webkit-order: 1;
+    -ms-order: 1;
+    order: 1;
+    -webkit-justify-content: center;
+    -ms-justify-content: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden; } }
+
+@media only screen and (min-width: 992px) {
+  .c-hero__img {
+    height: 100%;
+    max-height: 640px;
+    max-width: 500%; } }
+
+@media only screen and (min-width: 1030px) {
+  .c-hero__img {
+    max-height: 520px; } }
 
 .c-lead-gen {
   background-color: #e3e3e3;

@@ -1,14 +1,15 @@
 .c-hero {
 
-	@media only screen and (min-width: $small-break) {
+	@media only screen and (min-width: $medium-break) {
 		@include flex-display;
-		@include flex-flow(row wrap);
+		@include flex-flow(row);
+		@include justify-content(space-around);
 	}
 
 	@include e('aside') {
 		background-color: $panel;
 
-		@media only screen and (min-width: $small-break) {
+		@media only screen and (min-width: $medium-break) {
 			@include align-items(center);
 			@include flex(1);
 			@include flex-display;
@@ -36,12 +37,19 @@
 			color: $white;
 		}
 
+		.disaster-response-international.leadgen &,
+		.enough-for-all.leadgen &,
+		.orangutans-forever.leadgen &,
+		.the-freedom-campaign.leadgen & {
+			background-color: $panel;
+		}
+
 	}
 
 	@include e('wrap') {
 		padding: 20px;
 
-		@media only screen and (min-width: $small-break) {
+		@media only screen and (min-width: $medium-break) {
 			padding: 40px;
 		}
 
@@ -60,16 +68,31 @@
 		margin-bottom: 24px;
 	}
 
-	@include e('img') {
-		display: block;
-		background-color: black; 
-		min-height: 220px;
-		width: 100%;
+	@include e('main') {
 
-		@media only screen and (min-width: $small-break) {
+		@media only screen and (min-width: $medium-break) {
+			@include align-items(center);
 			@include flex(2);
+			@include flex-display;
+			@include flex-flow(row wrap);
 			@include flex-order(1);
-			min-height: 480px;
+			@include justify-content(center);
+			position: relative;
+			overflow: hidden;
+		}
+
+	}
+
+	@include e('img') {
+
+		@media only screen and (min-width: $medium-break) {
+			height: 100%; 
+			max-height: 640px;
+			max-width: 500%;
+		}
+
+		@media only screen and (min-width: $large-break) {
+			max-height: 520px;
 		}
 
 	}
