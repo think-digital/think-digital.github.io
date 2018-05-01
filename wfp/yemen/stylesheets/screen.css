@@ -10825,40 +10825,53 @@ a:hover {
   font-weight: 400;
 }
 
+/* line 107, ../sass/screen.scss */
+.socialLink:hover {
+  border-bottom: 0 none;
+  opacity: 0.8;
+}
+
+@media (max-width: 1200px) {
+  /* line 114, ../sass/screen.scss */
+  .text-large {
+    font-size: 28px;
+    line-height: 35px;
+  }
+}
 @media (max-width: 1023px) {
-  /* line 108, ../sass/screen.scss */
+  /* line 122, ../sass/screen.scss */
   .logo {
     width: 90px;
     margin-top: 20px !important;
   }
 
-  /* line 113, ../sass/screen.scss */
+  /* line 127, ../sass/screen.scss */
   .header {
     min-height: 260px;
   }
 
-  /* line 118, ../sass/screen.scss */
+  /* line 132, ../sass/screen.scss */
   .text-large {
-    font-size: 28px;
+    font-size: 21px;
     line-height: 35px;
   }
 
-  /* line 123, ../sass/screen.scss */
+  /* line 137, ../sass/screen.scss */
   p {
     font-size: 16px;
     line-height: 26px;
   }
 
-  /* line 129, ../sass/screen.scss */
+  /* line 143, ../sass/screen.scss */
   .footer, .bottomFooter {
     text-align: center;
   }
-  /* line 132, ../sass/screen.scss */
+  /* line 146, ../sass/screen.scss */
   .footer .text-right, .bottomFooter .text-right {
     text-align: center !important;
   }
 
-  /* line 138, ../sass/screen.scss */
+  /* line 152, ../sass/screen.scss */
   .bottomFooter ul {
     margin-top: 25px;
   }
