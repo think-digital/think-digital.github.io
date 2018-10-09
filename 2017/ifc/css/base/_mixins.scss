@@ -1,0 +1,416 @@
+// All mixins for the project
+
+// Packing flex lines (flex-start | flex-end | center | space-between | space-around | stretch) - applies to: multi-line flex containers 
+@mixin align-content($align: stretch) {
+  -webkit-align-content: $align;
+      -ms-align-content: $align;
+          align-content: $align;
+}
+
+// Cross-axis alignment (flex-start | flex-end | center | baseline | stretch) - applies to: flex containers 
+@mixin align-items($align: stretch) {
+  -webkit-align-items: $align;
+      -ms-align-items: $align;
+          align-items: $align;
+}
+
+// Cross-axis alignment (flex-start | flex-end | center | baseline | stretch) - applies to: flex items 
+@mixin align-self($align: auto) {
+  -webkit-align-self: $align;
+      -ms-align-self: $align;
+          align-self: $align;
+}
+
+// Animation (name, duration, delay, ease) 
+@mixin animation ($name, $duration: 300ms, $delay: 0, $ease: ease) {
+	-webkit-animation: $name $duration $delay $ease;
+	   -moz-animation: $name $duration $delay $ease;
+	    -ms-animation: $name $duration $delay $ease;
+		    animation: $name $duration $delay $ease;
+}
+
+// Apperance (none) 
+@mixin appearance($string: none) {
+	-webkit-appearance: $string;
+	   -moz-appearance: $string;
+	        appearance: $string;
+}
+
+// Background size (cover | 100%) 
+@mixin background-size($string: cover 100%) {
+	-webkit-background-size: $string;
+  	   -moz-background-size: $string;
+  	        background-size: $string;
+}
+
+/// BEM @alias element
+@mixin e($element) {
+    @include element($element)  {
+        @content;
+    }
+}
+@mixin element($element) {
+    &__#{$element} {
+        @content;
+    }
+}
+
+/// BEM @alias modifier
+@mixin m($modifier) {
+    @include modifier($modifier) {
+        @content;
+    }
+}
+@mixin modifier($modifier) {
+    &--#{$modifier} {
+        @content;
+    }
+}
+
+// Border radius (<number>px) 
+@mixin border-radius($radius: 5px) {
+	-webkit-border-radius: $radius;
+	   -moz-border-radius: $radius;
+	        border-radius: $radius;
+}
+
+// Box shadow () 
+@mixin box-shadow($string) {
+	-webkit-box-shadow: $string;
+	   -moz-box-shadow: $string;
+	        box-shadow: $string;
+}
+
+// Box sizing (border-box) 
+@mixin box-sizing($type: border-box) {
+	-webkit-box-sizing: $type;
+	   -moz-box-sizing: $type;
+	        box-sizing: $type;
+}
+
+// Clearfix 
+@mixin clearfix {
+	
+	&:after {
+		clear: both;
+		content: ".";
+		display: block;
+		height: 0;
+		visibility: hidden;
+	}
+	
+	.lt-ie9 & {
+		height: 1%;
+	}
+
+}
+
+// Drop shadow () 
+@mixin drop-shadow($x: 0, $y: 1px, $blur: 2px, $spread: 0, $alpha: 0.25) {
+	-webkit-box-shadow:	$x $y $blur $spread rgba(0, 0, 0, $alpha);
+	   -moz-box-shadow: $x $y $blur $spread rgba(0, 0, 0, $alpha);
+	        box-shadow: $x $y $blur $spread rgba(0, 0, 0, $alpha);
+}
+
+// Flex items (<positive-number> | initial | auto | none) - applies to: flex items 
+@mixin flex($columns: initial) {
+  -webkit-flex: $columns;
+      -ms-flex: $columns;
+          flex: $columns;
+}
+
+// Flex basis (<width>) - applies to: the initial main size of the flex item 
+@mixin flex-basis($width: auto) {
+  -webkit-flex-basis: $width;
+      -ms-flex-basis: $width;
+          flex-basis: $width;
+}
+
+// Flex flow direction (row | row-reverse | column | column-reverse) - applies to: flex containers 
+@mixin flex-direction($direction: row) {
+  -webkit-flex-direction: $direction;
+      -ms-flex-direction: $direction;
+          flex-direction: $direction;
+}
+
+// Flexbox display (flex or inline-flex) 
+@mixin flex-display($display: flex) {
+	display: -webkit-#{$display};
+	display: -ms-#{$display}box;
+	display: -ms-#{$display};
+	display: $display;
+}
+
+// Flex direction and wrap (<flex-direction> || <flex-wrap>) - applies to: flex containers 
+@mixin flex-flow($flow) {
+  -webkit-flex-flow: $flow;
+      -ms-flex-flow: $flow;
+          flex-flow: $flow;
+}
+
+// Flex grow factor (<number>) - applies to: flex items 
+@mixin flex-grow($grow: 0) {
+  -webkit-flex-grow: $grow;
+      -ms-flex-grow: $grow;
+          flex-grow: $grow;
+}
+
+// Display order (<integer>) - applies to: flex items 
+@mixin flex-order($order: 0) {
+  -webkit-order: $order;
+      -ms-order: $order;
+          order: $order;
+}
+
+// Flex shrink (<number>) - applies to: flex item shrink factor 
+@mixin flex-shrink($shrink: 1) {
+  -webkit-flex-shrink: $shrink;
+      -ms-flex-shrink: $shrink;
+          flex-shrink: $shrink;
+}
+
+// Flex line wrapping (nowrap | wrap | wrap-reverse) - applies to: flex containers 
+@mixin flex-wrap($wrap: nowrap) {
+  -webkit-flex-wrap: $wrap;
+      -ms-flex-wrap: $wrap;
+          flex-wrap: $wrap;
+}
+
+// Font face (name, file, weight, style)
+@mixin font-face($fontname, $fontfile, $fontweight:normal, $fontstyle:normal) {
+	font-family: "#{$fontfile}";
+	        src: url("../../webfonts/#{$fontfile}.eot");
+	        src: url("../../webfonts/#{$fontfile}.eot?#iefix") format("embedded-opentype"),
+	        	 url("../../webfonts/#{$fontfile}.woff2") format("woff2"),
+	             url("../../webfonts/#{$fontfile}.woff") format("woff"),
+	             url("../../webfonts/#{$fontfile}.ttf") format("truetype"),
+	             url("../../webfonts/#{$fontfile}.svg##{$fontname}") format("svg");
+	font-weight: $fontweight;
+	 font-style: $fontstyle;
+}
+
+// Font size in px/rem (<number>) 
+@mixin font-size($sizeValue) {
+	 $pxValue: $sizeValue;
+	$remValue: ($sizeValue / 10);
+	font-size: #{$pxValue}px; 
+	font-size: #{$remValue}rem;
+}
+
+// Gradient () 
+@mixin gradient($startColor: #eee, $endColor: white) {
+	background-color: $startColor;
+		  background: -webkit-gradient(linear, left top, left bottom, from($startColor), to($endColor));
+		  background: -webkit-linear-gradient(top, $startColor, $endColor);
+		  background: -moz-linear-gradient(top, $startColor, $endColor);
+		  background: -ms-linear-gradient(top, $startColor, $endColor);
+		  background: -o-linear-gradient(top, $startColor, $endColor);
+}
+
+// Line height in px/rem (<number>) 
+@mixin line-height($sizeValue) {
+	   $pxValue: $sizeValue;
+	  $remValue: ($sizeValue / 10);
+	line-height: #{$pxValue}px; 
+	line-height: #{$remValue}rem;
+}
+
+// Height in px/rem (<number>) 
+@mixin height($sizeValue) {
+	   $pxValue: $sizeValue;
+	  $remValue: ($sizeValue / 10);
+	     height: #{$pxValue}px; 
+		 height: #{$remValue}rem;
+}
+
+// Horizontal gradient () 
+@mixin horizontal-gradient($startColor: #eee, $endColor: white) {
+ 	background-color: $startColor;
+	background-image: -webkit-gradient(linear, left top, right top, from($startColor), to($endColor));
+	background-image: -webkit-linear-gradient(left, $startColor, $endColor);
+	background-image: -moz-linear-gradient(left, $startColor, $endColor);
+	background-image: -ms-linear-gradient(left, $startColor, $endColor);
+	background-image: -o-linear-gradient(left, $startColor, $endColor);
+}
+
+// Image replacement 
+@mixin image-replace {
+	text-indent: 100%;
+	white-space: nowrap;
+	   overflow: hidden;
+
+	.gt-ie9 &, .lt-ie10 & {
+		    display: block;
+		line-height: 0;
+		   overflow: hidden;
+		 text-align: left;
+		text-indent: -1000em;
+	}
+
+}
+
+// Image rendering 
+@mixin image-render {
+	image-rendering: optimizeQuality;
+  	image-rendering: -o-crisp-edges;
+  	image-rendering: -webkit-optimize-contrast;
+  	      transform: rotate(.0001deg);
+}
+
+// Display (inline-block) 
+@mixin inline-block {
+	display: inline-block;
+	
+	.lt-ie8 & {
+		display: inline;
+		   zoom: 1;
+	}
+	
+}
+
+// Inner shadow () 
+@mixin inner-shadow($x: 0, $y: 1px, $blur: 2px, $spread: 0, $red: 0, $green: 0, $blue: 0, $alpha: 0.25) {
+	-webkit-box-shadow: inset $x $y $blur $spread rgba($red, $green, $blue, $alpha);
+	   -moz-box-shadow: inset $x $y $blur $spread rgba($red, $green, $blue, $alpha);
+	        box-shadow: inset $x $y $blur $spread rgba($red, $green, $blue, $alpha);
+}
+
+// Axis alignment (flex-start | flex-end | center | space-between | space-around ) - applies to: flex containers 
+@mixin justify-content($justify: flex-start) {
+  -webkit-justify-content: $justify;
+      -ms-justify-content: $justify;
+          justify-content: $justify;
+}
+
+// Opacity (<decimal>) 
+@mixin opacity($opacity: 0.8) {
+	-webkit-opacity: $opacity;
+	   -moz-opacity: $opacity;
+	        opacity: $opacity;
+}
+
+// Perspective 
+@mixin perspective($value: 1000) {
+	-webkit-perspective: $value;
+	   -moz-perspective: $value;
+	    -ms-perspective: $value;
+	        perspective: $value;
+}
+
+// Placeholder (<color>) 
+@mixin placeholder($color: #aaa) {
+	&::-webkit-input-placeholder { color: $color; }
+			  &:-moz-placeholder { color: $color; }
+			 &::-moz-placeholder { color: $color; }
+		 &:-ms-input-placeholder { color: $color; }
+}
+
+// Rotate 
+@mixin rotate($deg) {
+	-webkit-transform: rotate($deg);
+	   -moz-transform: rotate($deg);
+	    -ms-transform: rotate($deg);
+	     -o-transform: rotate($deg);
+	        transform: rotate($deg);
+}
+
+// Round (size, radius) 
+@mixin round($size, $radius) {
+	@include border-radius($radius);
+	@include size($size, $size);
+	line-height: $size;
+}
+
+// Scale 
+@mixin scale($factor) {
+	-webkit-transform: scale($factor);
+	   -moz-transform: scale($factor);
+	    -ms-transform: scale($factor);
+	     -o-transform: scale($factor);
+	        transform: scale($factor);
+}
+
+// Size (width, height) 
+@mixin size($width, $height) {
+	 width: $width;
+	height: $height;
+}
+
+// Skew 
+@mixin skew($deg, $deg2) {
+	-webkit-transform: skew($deg, $deg2);
+	   -moz-transform: skew($deg, $deg2);
+	    -ms-transform: skew($deg, $deg2);
+	     -o-transform: skew($deg, $deg2);
+	        transform: skew($deg, $deg2);
+}
+
+// Square (size) 
+@mixin square($size) {
+	@include size($size, $size);
+}
+
+// Text Rendering 
+@mixin text-rendering {
+	 -webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+			 text-rendering: optimizeLegibility;
+}
+
+// Text Shadow 
+@mixin text-shadow ($string: 1px 1px 1px rgba(0, 0, 0, 0.25)) {
+	text-shadow: $string;
+}
+
+// Transform 
+@mixin transform($string){
+	-webkit-transform: $string;
+	   -moz-transform: $string;
+	    -ms-transform: $string;
+	     -o-transform: $string;
+	        transform: $string;
+}
+
+// Transform Origin 
+@mixin transform-origin($x:center, $y:center) {
+	-webkit-transform-origin: $x $y;
+	   -moz-transform-origin: $x $y;
+	    -ms-transform-origin: $x $y;
+	     -o-transform-origin: $x $y;
+	        transform-origin: $x $y;
+}
+
+// Transition (property, delay, ease) 
+@mixin transition($transition) {
+	-webkit-transition: $transition;  
+	   -moz-transition: $transition;
+	    -ms-transition: $transition; 
+	     -o-transition: $transition;  
+	     	transition: $transition; 
+}
+
+// Translate 
+@mixin translate($x, $y:0) {
+	-webkit-transform: translate($x, $y);
+	   -moz-transform: translate($x, $y);
+	    -ms-transform: translate($x, $y);
+	     -o-transform: translate($x, $y);
+	        transform: translate($x, $y);
+}
+
+// Translate 3D 
+@mixin translate3d($x, $y: 0, $z: 0) {
+	-webkit-transform: translate3d($x, $y, $z);
+	   -moz-transform: translate3d($x, $y, $z);
+	    -ms-transform: translate3d($x, $y, $z);
+	     -o-transform: translate3d($x, $y, $z);
+	        transform: translate3d($x, $y, $z);
+}
+
+// Width in px/rem (<number>) 
+@mixin width($sizeValue) {
+	   $pxValue: $sizeValue;
+	  $remValue: ($sizeValue / 10);
+	      width: #{$pxValue}px; 
+	      width: #{$remValue}rem;
+}

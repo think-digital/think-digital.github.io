@@ -1,0 +1,46 @@
+.c-input {
+	clear: both;
+	margin-bottom: 20px;
+
+	@include e('field') {
+		
+	}
+
+	@include e('field-label') {
+		@include font-size(14);
+		@include font-semibold;
+		display: block;
+		margin-bottom: 8px;
+	}
+
+	@include e('field-input') {
+		@include appearance(none);
+		@include border-radius(4px);
+		@include font-semibold;
+		@include font-size(16);
+		@include height(48);
+		@include line-height(48);
+		background: $white;
+		border: 1px solid #{$border};
+		color: $paragraph;
+		display: block;
+		padding: 0 12px;
+		vertical-align: middle;
+		width: 100%;
+	}
+
+	@include m('inline') {
+		clear: none;
+		float: left;
+		width: 50%;
+	}
+
+	@include m('inline-start') {
+		padding-right: 10px;
+	}
+
+	@include m('inline-end') {
+		padding-left: 10px;
+	}
+
+}

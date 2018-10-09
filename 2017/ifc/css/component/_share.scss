@@ -1,0 +1,112 @@
+.c-share {
+
+	@include e('heading') {
+		@include font-bold;
+		@include font-size(18);
+		@include line-height(26);
+		margin-bottom: 12px;
+	}
+
+	@include e('icon') {
+		@include font-size(28);
+		color: $white;
+		margin-right: 10px;
+	
+		@include m('large') {
+			@include font-size(36);
+		}
+
+		@include m('round') {
+			@include font-size(24);
+			@include round(48px,100px);
+			background-color: $white;
+			color: $black;
+			display: block;
+			text-align: center;
+			vertical-align: middle;
+		}
+
+		@include m('outline') {
+			@include box-sizing(content-box);
+			@include font-size(24);
+			@include round(48px,100px);
+			border: 2px solid $white;
+			display: block;
+			text-align: center;
+			vertical-align: middle;
+
+			&:hover {
+				background-color: $white;
+				color: $primary;
+
+				.disaster-response-international & {
+					color: $disaster-response-international;
+				}
+
+				.enough-for-all & {
+					color: $enough-for-all;
+				}
+
+				.orangutans-forever & {
+					color: $orangutans-forever;
+				}
+
+				.the-freedom-campaign & {
+					color: $the-freedom-campaign;
+				}
+
+			}
+
+		}
+
+		@include m('email') {
+			
+			&:hover {
+				
+			}
+
+		}
+
+		@include m('facebook') {
+			
+			&:hover {
+				
+			}
+
+		}
+
+		@include m('instagram') {
+
+			&:hover {
+				
+			}
+
+		}
+
+		@include m('twitter') {
+			
+			&:hover {
+				
+			}
+
+		}
+
+		@include m('whatsapp') {
+			
+			&:hover {
+				
+			}
+
+		}
+
+		@include m('youtube') {
+			
+			&:hover {
+				
+			}
+
+		}
+
+	}
+
+}

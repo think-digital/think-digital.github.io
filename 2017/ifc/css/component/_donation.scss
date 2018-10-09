@@ -1,0 +1,232 @@
+$input-height: 48; // Set height for input fields
+$input-height-mobile: 44;  // Set height for input fields for mobile
+$input-border: 1px; // Set border size for input fields
+$input-padding: 0; // Set default padding for all input fields - top and bottom not needed as line-height set
+$input-padding-side: 15px; // Set side padding for all input fields - opposite side to icon
+$input-padding-icon: calc((#{$input-padding-side} + #{$input-padding-side}) + 12px); // Set padding for when icons are present for input fields
+$input-margin-outer-top: ($spacing / 2); // Set top spacing for input fields
+$input-margin-outer-bottom: $spacing; // Set bottom spacing for input fields
+
+.c-donation {
+	@include font-size(18);
+	@include line-height(26);
+	background-color: $panel;
+	background-color: $panel;
+	padding: 20px;
+
+	@media only screen and (min-width: $small-break) {
+		margin-top: 40px;
+		margin-right: 40px;
+		padding: 40px;
+	}
+
+	@include e('header') {
+		
+	}
+	
+	@include e('form') {
+		
+	}
+
+	@include e('amounts') {
+		
+	}
+	
+	@include e('heading') {
+		@include font-bold;
+		@include font-size(28);
+		@include line-height(36);
+		margin-bottom: 12px;
+
+		.disaster-response-international & {
+			color: $disaster-response-international;
+		}
+
+		.enough-for-all & {
+			color: $black;
+		}
+
+		.orangutans-forever & {
+			color: $orangutans-forever;
+		}
+
+		.the-freedom-campaign & {
+			color: $the-freedom-campaign;
+		}
+
+	}
+	
+	@include e('sub-heading') {
+		@include font-bold;
+		display: block;
+		margin-bottom: 12px;
+	}
+	
+	@include e('amount-label') {
+		@include font-bold;
+		@include font-size(16);
+		@include line-height(48);
+		background-color: $white;
+		border: 1px solid $border;
+		border-right: none;
+		display: block;
+		margin: 0;
+		position: relative;
+		text-align: center;
+		text-decoration: none;
+		vertical-align: middle;
+		width: 100%;
+
+		.l-list__item--tab:first-child & {
+			@include border-radius(4px 0 0 4px);
+		}
+
+		.l-list__item--tab:last-child & {
+			@include border-radius(0 4px 4px 0);
+			border-right: 1px solid $border;
+		}
+
+		&:hover {
+			cursor: pointer;
+		}
+
+		.disaster-response-international & {
+			color: $disaster-response-international;
+		}
+
+		.enough-for-all & {
+			color: $enough-for-all;
+		}
+
+		.orangutans-forever & {
+			color: $orangutans-forever;
+		}
+
+		.the-freedom-campaign & {
+			color: $the-freedom-campaign;
+		}
+
+	}
+	
+	@include e('amount-radio') {
+		@include opacity(0);
+		display: block;
+		height: 0;
+		left: 0;
+		margin: 0; 
+		padding: 0;
+		position: absolute;
+		top: 0;
+		width: 0;
+
+		& ~ * {
+			padding: 0 10px;
+		}
+
+		&:focus ~ *,
+		&:checked ~ * {
+			background-color: $primary;
+			color: $white;
+			display: block;
+
+			.disaster-response-international & {
+				background-color: $disaster-response-international;
+			}
+
+			.enough-for-all & {
+				background-color: $enough-for-all;
+				color: #222;
+			}
+
+			.orangutans-forever & {
+				background-color: $orangutans-forever;
+			}
+
+			.the-freedom-campaign & {
+				background-color: $the-freedom-campaign;
+			}
+
+		}
+
+	}
+	
+	@include e('amount-text') {
+		
+	}
+	
+	@include e('amount-currency') {
+		font-weight: normal;
+	}
+	
+	@include e('amount-desc') {
+		display: none;
+	}
+	
+	@include e('other') {
+		margin: 20px 0;
+	}
+	
+	@include e('other-field') {
+		
+	}
+
+	@include e('other-label') {
+		@include appearance(none);
+		@include border-radius(4px);
+		@include flex-display;
+		@include flex-flow(row);
+		@include font-semibold;
+		@include font-size(18);
+		@include height(48);
+		@include line-height(48);
+		background: $white;
+		border: 1px solid #{$border};
+		color: $paragraph;
+		max-width: 100%;
+		vertical-align: middle;
+		width: auto;
+	}
+
+	@include e('other-currency') {
+		@include font-bold;
+		margin: 0 5px 0 15px;
+		position: relative;
+		top: -1px;
+	}
+	
+	@include e('other-input') {
+		@include appearance(textfield);
+		@include font-size(18);
+		background: none;
+		border: none;
+		padding-right: 15px;
+		width: 100%;
+	}
+	
+	@include e('extra-fields') {
+		
+	}
+
+	@include e('submit') {
+		margin-bottom: 20px;
+	}
+
+	@include e('footnote') {
+		
+	}
+
+	@include e('secure') {
+		@include font-size(14);
+		@include line-height(20);
+		color: rgba(0,0,0,0.75);
+	}
+
+	@include e('secure-label') {
+		
+		.fa {
+			margin-right: 3px;
+		}
+
+	}
+
+}

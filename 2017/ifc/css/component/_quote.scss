@@ -1,0 +1,80 @@
+.c-quote {
+	margin-bottom: 30px;
+
+	@include e('text') {
+		color: $primary;
+		@include font-bold;
+		@include font-size(18);
+		@include line-height(26);
+
+		@media only screen and (min-width: $small-break) {
+			@include font-size(24);
+			@include line-height(32);
+		}
+
+		.disaster-response-international & {
+			color: $disaster-response-international-supporting;
+		}
+
+		.enough-for-all & {
+			color: $enough-for-all;
+		}
+
+		.orangutans-forever & {
+			color: $orangutans-forever;
+		}
+
+		.the-freedom-campaign & {
+			color: $the-freedom-campaign;
+		}
+
+		// Add quote marks
+
+		&:before {
+			content: '\f10d';
+			font-family: 'FontAwesome';
+			@include font-size(14);
+			padding-right: 3px;
+			position: relative;
+			top: -8px;
+		}
+
+		&:after {
+			@extend :before;
+			content: '\f10e';
+			padding-left: 3px;
+		}
+
+	}
+
+	@include e('name') {
+		border-left: 3px solid $primary;
+		@include font-size(14);
+		@include line-height(18);
+		margin: 8px 0 0;
+		padding: 0 0 0 10px;
+
+		.disaster-response-international & {
+			border-color: $disaster-response-international-supporting;
+		}
+
+		.enough-for-all & {
+			border-color: $enough-for-all;
+		}
+
+		.orangutans-forever & {
+			border-color: $orangutans-forever;
+		}
+
+		.the-freedom-campaign & {
+			border-color: $the-freedom-campaign;
+		}
+
+	}
+
+	@include e('label') {
+		font-style: normal;
+		@include opacity(0.75);
+	}
+
+}

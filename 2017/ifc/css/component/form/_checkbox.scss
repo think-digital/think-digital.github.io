@@ -1,0 +1,80 @@
+.c-checkbox {
+	margin-bottom: 20px;
+
+	@include e('label') {
+		@include font-size(14);
+		@include font-semibold;
+		display: block;
+		margin-bottom: 12px;	
+	}
+
+	@include e('field') {
+		margin-bottom: 12px;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+
+	}
+
+	@include e('field-label') {
+		display: block;
+		margin-bottom: 12px;
+		position: relative;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+
+	@include e('field-input') {
+		display: block;
+		height: 24px;
+		left: 0;
+		margin: 0;
+		padding: 0;
+		position: absolute;
+		top: 0;
+		width: 24px;
+
+		& ~ * {
+			display: block;
+			cursor: pointer;
+			@include font-size(14);
+			padding-left: 34px;
+			position: relative;
+			
+			&:after {
+				background: $white;
+				content: '';
+				font-family: 'FontAwesome';
+				border: 1px solid $border;
+				display: block;
+				@include font-size(12);
+				@include round(24px,4px);
+				position: absolute;
+				top: 0;
+				left: 0;
+				text-align: center;
+				vertical-align: middle;
+			}
+
+		}
+
+		&:checked ~ * {
+
+			&:after {
+				color: $title;
+				content: '\f00c';
+			}
+
+		}
+
+	}
+
+	@include e('field-text') {
+		@include font-size(14);
+		@include line-height(18);
+	}
+
+}
