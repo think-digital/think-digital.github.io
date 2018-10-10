@@ -1,0 +1,39 @@
+body {
+	background-color: #f6f6f6;
+
+	&.disaster-response-international {
+		background-color: #39A996;
+	}
+
+	&.enough-for-all {
+		background-color: $enough-for-all-supporting;
+	}
+
+	&.orangutans-forever {
+		background-color: $orangutans-forever-supporting;
+	}
+
+	&.the-freedom-campaign {
+		background-color: $the-freedom-campaign-supporting;
+	}
+
+}
+
+.l-page {
+	background-color: $white;
+	@include font-normal;
+	@include font-size(16);
+	letter-spacing: -0.5px;
+	@include line-height(20);
+	margin: 0 auto;
+	max-width: 1200px;
+	@include text-rendering;
+	word-spacing: auto;
+	word-wrap: break-word;
+	width: 100%;
+		
+	@include m('full') {
+		max-width: 100%;
+	}
+
+}

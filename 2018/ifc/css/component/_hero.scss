@@ -1,0 +1,101 @@
+.c-hero {
+
+	@media only screen and (min-width: $medium-break) {
+		@include flex-display;
+		@include flex-flow(row);
+		@include justify-content(space-around);
+	}
+
+	@include e('aside') {
+		background-color: $panel;
+
+		@media only screen and (min-width: $medium-break) {
+			@include align-items(center);
+			@include flex(1);
+			@include flex-display;
+			@include flex-flow(row wrap);
+			@include flex-order(2);
+		}
+
+		.disaster-response-international & {
+			background-color: $disaster-response-international;
+			color: $white;
+		}
+
+		.enough-for-all & {
+			background-color: $enough-for-all;
+			color: $black;
+		}
+
+		.orangutans-forever & {
+			background-color: $orangutans-forever;
+			color: $white;
+		}
+
+		.the-freedom-campaign & {
+			background-color: $the-freedom-campaign;
+			color: $white;
+		}
+
+		.disaster-response-international.leadgen &,
+		.enough-for-all.leadgen &,
+		.orangutans-forever.leadgen &,
+		.the-freedom-campaign.leadgen & {
+			background-color: $panel; 
+		}
+
+	}
+
+	@include e('wrap') {
+		padding: 20px;
+
+		@media only screen and (min-width: $medium-break) {
+			padding: 40px;
+		}
+
+	}
+
+	@include e('heading') {
+		@include font-bold;
+		@include font-size(24);
+		@include line-height(28);
+		margin-bottom: 12px;
+	}
+
+	@include e('text') {
+		@include font-size(18);
+		@include line-height(24);
+		margin-bottom: 24px;
+	}
+
+	@include e('main') {
+
+		@media only screen and (min-width: $medium-break) {
+			@include align-items(center);
+			@include flex(2);
+			@include flex-display;
+			@include flex-flow(row wrap);
+			@include flex-order(1);
+			@include justify-content(center);
+			background-color: $black;
+			position: relative;
+			overflow: hidden;
+		}
+
+	}
+
+	@include e('img') {
+
+		@media only screen and (min-width: $medium-break) {
+			height: 100%; 
+			max-height: 640px;
+			max-width: 500%;
+		}
+
+		@media only screen and (min-width: $large-break) {
+			max-height: 520px;
+		}
+
+	}
+
+}

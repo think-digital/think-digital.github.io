@@ -1,0 +1,11 @@
+.c-validation {
+
+	@include m('success') {
+		color: $success;
+	}
+
+	@include m('error') {
+		color: $error;
+	}
+
+}

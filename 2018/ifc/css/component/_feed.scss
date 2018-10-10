@@ -1,0 +1,34 @@
+.c-feed {
+	background-color: $panel;
+	padding: 20px;
+
+	@media only screen and (min-width: $small-break) {
+		margin-top: 40px;
+		margin-right: 40px;
+		padding: 40px;
+	}
+
+	@include e('heading') {
+		@include font-bold;
+		@include font-size(18);
+		@include line-height(26);
+		margin-bottom: 12px;
+	}
+
+	@include e('list') {
+		list-style: none;
+	}
+
+	@include e('item') {
+		border-bottom: 1px dotted $border;
+		@include font-size(14);
+		padding: 8px 0;
+
+		&:last-child {
+			border-bottom: none;
+			padding-bottom: 0;
+		}
+
+	}
+
+}

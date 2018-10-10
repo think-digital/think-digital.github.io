@@ -1,0 +1,101 @@
+// All variables for the project
+
+// Breakpoints
+
+$extra-small-break: 480px;
+$small-break: 768px;
+$medium-break: 992px;
+$large-break: 1030px;
+
+// Numbers
+
+$spacing: 20px;
+
+// Theme colours
+
+$primary: #2dcc70;
+$secondary: #f4b350;
+$tertiary: #f4b350;
+
+// Element colours
+
+$title: #2c3e50;
+$subtitle: #747474;
+$paragraph: #3f3f3f;
+$link: #2dcc70;
+$highlight: #d3d3d3;
+$panel: #e3e3e3;
+$border: darken($panel,20%);
+
+// Alert colours
+
+$success: #69b670;
+$error: #ee2d14;
+
+// Default colours
+
+$black: #000;    
+$white: #fff;
+
+// Brand colours
+
+$facebook: #3b5998;
+$google: #dd4b39;
+$instagram: #405de6;
+$linkedin: #0077b5;
+$snapchat: #fffc00;
+$twitter: #1da1f2;
+$whatsapp: #25d366;
+$youtube: #cd201f;
+
+
+$disaster-response-international: #D0021B;
+$disaster-response-international-supporting: #189E88;
+$enough-for-all: #F5A623;
+$enough-for-all-supporting: #FFCC77;
+$orangutans-forever: #E68237;
+$orangutans-forever-supporting: #7ED371;
+$the-freedom-campaign: #9B48A3;
+$the-freedom-campaign-supporting: #BA71C2;
+
+// Fonts
+
+// @font-face { 
+// 	@include font-face(ADD FONT NAME,'ADD FILENAME')  
+// }
+
+@mixin font-normal {
+	font-family: 'Open Sans', sans-serif;
+	font-weight: normal;
+}
+
+@mixin font-semibold {
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 500;
+}
+
+@mixin font-bold {
+	font-family: 'Open Sans', sans-serif;
+
+	.disaster-response-international & {
+		font-family: 'Archivo Black', sans-serif;
+		font-weight: normal;
+	}
+
+	.enough-for-all & {
+		font-family: 'Francois One', sans-serif;
+		font-weight: normal;
+	}
+
+	.orangutans-forever & {
+		font-family: 'Anton', serif;
+		font-weight: normal;
+		letter-spacing: 0.25px;
+	}
+
+	.the-freedom-campaign & {
+		font-family: 'Bitter', serif;
+		font-weight: bold;
+	}
+
+}

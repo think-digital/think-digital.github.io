@@ -1,0 +1,84 @@
+.c-follow {
+
+	@media only screen and (min-width: $small-break) {
+		text-align: right;
+	}
+
+	@include e('icon') {
+		color: $white;
+		@include font-size(24);
+		margin: 0 5px;
+		text-decoration: none;
+
+		@media only screen and (min-width: $small-break) {
+			@include font-size(28);
+		}
+
+		@include m('email') {
+			
+			&:hover {
+				color: $primary;
+
+				.disaster-response-international & {
+					color: $disaster-response-international;
+				}
+
+				.enough-for-all & {
+					color: $enough-for-all;
+				}
+
+				.orangutans-forever & {
+					color: $orangutans-forever;
+				}
+
+				.the-freedom-campaign & {
+					color: $the-freedom-campaign;
+				}
+
+			}
+
+		}
+
+		@include m('facebook') {
+			
+			&:hover {
+				color: $facebook;
+			}
+
+		}
+
+		@include m('instagram') {
+
+			&:hover {
+				color: $instagram;
+			}
+
+		}
+
+		@include m('twitter') {
+			
+			&:hover {
+				color: $twitter;
+			}
+
+		}
+
+		@include m('whatsapp') {
+			
+			&:hover {
+				color: $whatsapp;
+			}
+
+		}
+
+		@include m('youtube') {
+			
+			&:hover {
+				color: $youtube;
+			}
+
+		}
+
+	}
+
+}
