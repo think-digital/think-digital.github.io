@@ -1,0 +1,47 @@
+.l-band {
+
+	@include m('highlight') {
+		background-color: $panel;
+	}
+
+	@include m('header') {
+		padding: 20px;
+
+		@media only screen and (min-width: $small-break) {
+			padding: 20px 40px;
+		}
+
+	}
+
+	@include m('hero') {
+		padding: 0;
+	}
+
+	@include m('footer') {
+		background-color: $black;
+		color: $white;
+		padding: 20px;
+
+		@media only screen and (min-width: $small-break) {
+			padding: 40px;
+		}
+
+		.disaster-response-international & {
+			background-color: $black;
+		}
+
+		.enough-for-all & {
+			background-color: $black;
+		}
+
+		.orangutans-forever & {
+			background-color: $orangutans-forever;
+		}
+
+		.the-freedom-campaign & {
+			background-color: $the-freedom-campaign;
+		}
+
+	}
+	
+}

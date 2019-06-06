@@ -1,0 +1,109 @@
+.c-button {
+	@include appearance;
+	border: none;
+	@include border-radius(4px);
+	@include inline-block;
+	@include font-bold;
+	@include font-size(18);
+	@include line-height(48);
+	margin: 0;
+	max-width: 100%;
+	padding: 0 20px;
+	position: relative;
+	text-align: center;
+	text-decoration: none;
+	vertical-align: middle;
+	width: 100%;
+
+	@media only screen and (min-width: $small-break) {
+		width: auto;
+	}
+
+	&:hover {
+		cursor: pointer;
+	}
+
+	&:active, &:target {
+		position: relative;
+		top: 2px;
+	}
+
+	&:focus {
+		
+	}
+
+	@include m('full') {
+		display: block;
+		width: 100%;
+	}
+
+	@include m('large') {
+		@include font-size(24);
+		@include line-height(56);
+		padding: 0 40px;
+	}
+
+	@include m('primary') {
+		background-color: $primary;
+		color: $white;
+
+		.disaster-response-international & {
+			background-color: $disaster-response-international;
+		}
+
+		.enough-for-all & {
+			background-color: $enough-for-all;
+			color: #222;
+		}
+
+		.orangutans-forever & {
+			background-color: $orangutans-forever;
+		}
+
+		.the-freedom-campaign & {
+			background-color: $the-freedom-campaign;
+		}
+
+	}
+
+	@include m('secondary') {
+		background-color: $secondary;
+		color: $white;
+	}
+
+	@include m('outline') {
+		background: none;
+		border: 2px solid $white;
+		color: $white;
+
+		.enough-for-all & {
+			border: 2px solid $black;
+			color: $black;
+		}
+
+		&:hover {
+			background-color: $white;
+			color: $primary;
+
+			.disaster-response-international & {
+				color: $disaster-response-international;
+			}
+
+			.enough-for-all & {
+				background-color: $black;
+				color: $enough-for-all;
+			}
+
+			.orangutans-forever & {
+				color: $orangutans-forever;
+			}
+
+			.the-freedom-campaign & {
+				color: $the-freedom-campaign;
+			}
+
+		}
+
+	}
+
+}

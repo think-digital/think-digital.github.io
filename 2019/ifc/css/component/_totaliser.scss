@@ -1,0 +1,12 @@
+.c-totaliser {
+	margin-bottom: 20px;
+
+	@include e('text') {
+		
+	}
+
+	@include e('total') {
+		
+	}
+
+}

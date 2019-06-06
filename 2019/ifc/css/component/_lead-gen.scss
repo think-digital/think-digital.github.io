@@ -1,0 +1,47 @@
+.c-lead-gen {
+	background-color: $panel;
+	color: $paragraph;
+	padding: 20px;
+
+	@media only screen and (min-width: $small-break) {
+		padding: 40px;
+	}
+
+	@include e('header') {
+		
+	}
+
+	@include e('heading') {
+		@include font-bold;
+		@include font-size(28);
+		@include line-height(36);
+		margin-bottom: 8px;
+	}
+	
+	@include e('form') {
+		
+	}
+	
+	@include e('fields') {
+		
+	}
+
+	@include e('submit') {
+		
+	}
+
+	@include e('supporting') {
+		margin-top: 20px;
+	}
+
+	@include e('supporting-text') {
+		@include font-size(12);
+		@include line-height(16);
+		font-style: italic;
+	}
+
+	@include e('supporting-link') {
+		color: inherit;
+	}
+
+}
