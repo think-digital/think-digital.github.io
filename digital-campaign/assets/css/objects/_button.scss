@@ -1,0 +1,261 @@
+$object: 'o-button';
+
+$border-radius: 100px;
+
+// Button
+.#{$object} {
+	@include transition(all 0.2s ease-in);
+	position: relative;
+
+	display: inline-block;
+	padding: 0 1.5em;
+	text-align: center;
+	vertical-align: middle;
+	width: auto;
+
+	background-color: $button;
+  border: 2px solid $button;
+  color: $button-text;
+
+	font-size: em(16);
+	font-weight: 900;
+	line-height: 2.75;
+	text-decoration: none;
+
+	&:hover {
+		background-color: $button-hover;
+		border-color: $button-hover;
+		color: $button-hover-text;
+		cursor: pointer;
+	}
+
+	&:active {
+		background-color: $button-active;
+		border-color: $button-active;
+		color: $button-active-text;
+	}
+
+	@include breakpoint('small') {
+		display: block;
+	  padding: 0 0.5em;
+	  width: 100%;
+	}
+
+	&__suffix {
+		display: block;
+		font-weight: 600;
+		font-size: 12px;
+		line-height: 1;
+		position: relative;
+		top: -10px;
+	}
+
+	&:focus {
+		outline: $outline auto 5px;
+	}
+
+}
+
+.#{$object}--unstyled {
+	appearance: none;
+	background: none;
+	border: none;
+	padding: 0;
+}
+
+// Sizing
+.#{$object}--extra-small {
+  font-size: em(12);
+}
+.#{$object}--small {
+  font-size: em(14);
+}
+.#{$object}--large {
+  font-size: em(20);
+}
+.#{$object}--extra-large {
+  font-size: em(24);
+}
+
+// Layout
+.#{$object}--full {
+	display: block;
+	padding: 0 0.5em;
+	width: 100%;
+}
+.#{$object}--wide {
+	padding: 0 1.5em;
+
+	@include breakpoint('small-min') {
+		padding: 0 3em;
+	}
+
+}
+.#{$object}--offset {
+
+	@include breakpoint('medium-min') {
+		margin-left: em(-5);
+	}
+
+}
+.#{$object}--suffix {
+	line-height: 2.15;
+}
+
+// Shape
+.#{$object}--square {
+  font-size: em(24);
+  height: 2em;
+  line-height: 2em;
+	padding: 0;
+	width: 2em;
+}
+.#{$object}--square-small {
+  font-size: em(18);
+  height: 2em;
+  line-height: 2em;
+	padding: 0;
+	width: 2em;
+}
+.#{$object}--circle {
+	@extend .#{$object}--square;
+	@include border-radius(100%);
+}
+.#{$object}--circle-small {
+	@extend .#{$object}--square-small;
+	@include border-radius(100%);
+}
+.#{$object}--rounded {
+	@include border-radius($border-radius);
+}
+
+// Colour
+.#{$object}--shadow {
+	@include box-shadow(0px 0px 20px rgba($gradient,0.25));
+}
+
+
+.#{$object}--highlight {
+  background-color: $button-highlight;
+  border: 2px solid $button-highlight;
+  color: $button-highlight-text;
+
+	&:hover {
+    background-color: $button-highlight-hover;
+    border: 2px solid $button-highlight-hover;
+  }
+
+	&:active {
+		background-color: $button-highlight-active;
+  }
+
+}
+.#{$object}--ghost {
+	background-color: transparent;
+	border: 2px solid $button-ghost;
+	color: $button-ghost-text;
+
+	&:hover {
+    background-color: $button-ghost-hover;
+    border-color: $button-ghost-hover;
+    color: $button-ghost-hover-text;
+  }
+
+  &:active,
+  &.is-active {
+    background-color: $button-ghost-active;
+    border-color: $button-ghost-active;
+    color: $button-ghost-hover-text;
+  }
+
+  &.is-not-active {
+    background-color: $button-ghost;
+    border-color: $border;
+    color: $button-ghost-text;
+  }
+
+}
+
+%button-push {
+	// &:hover,
+	// &:focus {
+	// 	cursor: pointer;
+	// 	top: 1px;
+	// }
+	&:active, &:target {
+		top: 1px;
+	}
+}
+
+%button-disabled {
+
+	&:disabled {
+		// cursor: not-allowed;
+		pointer-events: none;
+		opacity: 0.6;
+
+		.fa {
+			margin-right: 5px;
+		}
+
+	}
+}
+
+.#{$object} {
+	@extend .#{$object};
+	@extend %button-push;
+	@extend %button-disabled;
+
+	// Social Media
+
+	$social-list:
+	email,
+	facebook,
+	google,
+	instagram,
+	linkedin,
+	snapchat,
+	twitter,
+	whatsapp,
+	youtube
+	;
+	$social-color:
+	$email,
+	$facebook,
+	$google,
+	$instagram,
+	$linkedin,
+	$snapchat,
+	$twitter,
+	$whatsapp,
+	$youtube
+	;
+
+	@for $i from 1 through length($social-list) {
+		&--#{nth($social-list, $i)} {
+			background-color: $white;
+			border: none;
+			color: $heading;
+
+			&:hover {
+				background-color: $white;
+				border-color: $white;
+				color: nth($social-color, $i);
+			}
+
+		}
+		&--#{nth($social-list, $i)}-flat {
+			background-color: $panel;
+			border: none;
+			color: nth($social-color, $i);
+
+			&:hover {
+				background-color: nth($social-color, $i);
+				border-color: nth($social-color, $i);
+				color: $white;
+			}
+
+		}
+	}
+
+}

@@ -1,0 +1,72 @@
+$component: 'c-feed';
+
+.#{$component} {
+  color: $text-muted;
+
+  @include breakpoint('medium-min') {
+    text-align: center;
+  }
+
+}
+
+.#{$component}__heading {
+  margin-bottom: em(20);
+}
+
+.#{$component}__item {
+
+  @include breakpoint('small-max') {
+    @include flex;
+    @include flex-align-center;
+    height: 100%;
+    // min-height: em(90);
+    position: relative;
+    padding-bottom: em(10);
+  }
+
+}
+
+.#{$component}__text {
+  font-size: em(15);
+  font-weight: 600;
+
+  @include breakpoint('small-max') {
+    @include flex-item-basis;
+    font-size: em(14);
+  }
+
+}
+
+.#{$component}__img {
+  max-height: em(48);
+  width: auto;
+
+  @include breakpoint('small-max') {
+      max-width: em(48);
+      margin-right: em(20);
+  }
+
+  @include breakpoint('medium-min') {
+      margin-bottom: em(10);
+      max-height: em(64);
+  }
+
+  &--offset {
+
+      @include breakpoint('medium-min') {
+          position: relative;
+          top: 10px;
+      }
+
+  }
+
+}
+
+.#{$component}__name {
+  display: block;
+}
+
+.#{$component}__time {
+  opacity: 0.8;
+  display: block;
+}

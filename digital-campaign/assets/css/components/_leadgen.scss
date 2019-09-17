@@ -1,0 +1,47 @@
+$component: 'c-form';
+
+.#{$component} {
+
+}
+
+.#{$component}__heading {
+
+}
+
+.#{$component}__panel {
+
+}
+
+.#{$component}__fields {
+  @include border-radius(10px);
+  background-color: lighten($panel,2%);
+  margin: em(25) 0;
+  padding: em(25);
+
+  @include breakpoint('extra-small-min') {
+    margin: em(30) 0;
+    padding: em(25) em(30);
+  }
+
+  @include breakpoint('small-min') {
+    padding: em(40);
+  }
+
+  .o-checkbox__label {
+    max-width: 100%;
+  }
+
+  .o-checkbox__field ~ *:after {
+    background-color: $white;
+  }
+
+  .o-checkbox__field:checked ~ *:after {
+    background-color: $success;
+  }
+
+}
+
+.#{$component}__button {
+  margin-bottom: em(30);
+	text-align: center;
+}

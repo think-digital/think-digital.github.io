@@ -13,3 +13,6 @@ www/font
 var/doctrine
 docker/varnish/libvmod-geoip-master
 docker/varnish/libvmod-geoip2-master
+
+config.codekit3
+digital-campaign/assets/css/.sass-cache

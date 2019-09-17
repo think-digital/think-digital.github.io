@@ -1,0 +1,30 @@
+$object: 'o-link';
+
+.#{$object} {
+    border-bottom: em(1) solid currentColor;
+    color: currentColor;
+    padding-bottom: em(1);
+    text-decoration: none;
+
+    &:hover {
+        border-color: $link;
+        color: $link;
+    }
+
+    &:focus {
+		outline: $outline auto 5px;
+	}
+
+}
+
+// Color
+.#{$object}--external {
+    font-weight: bold;
+
+    &:after {
+        font-family: 'FontAwesome';
+        font-size: 0.8em;
+        content: '\f0da';
+        padding-left: em(8);
+    }
+}

@@ -1,0 +1,46 @@
+$extra-small-min: em(375);
+$extra-small-max: em(575);
+$small-min: em(576);
+$small-max: em(767);
+$medium-min: em(768);
+$medium-max: em(991);
+$large-min: em(992);
+$large-max: em(1999);
+$extra-large-min: em(1200);
+$extra-large-max: em(1400);
+
+// Breakpoints
+$breakpoints: (
+    'extra-small': (max-width: $extra-small-min),
+    'extra-small-min-max': (min-width: $extra-small-min) and (max-width: $extra-small-max),
+    'extra-small-min': (min-width: $extra-small-min),
+    'extra-small-max': (max-width: $extra-small-max),
+    'small': (max-width: $small-min),
+    'small-min-max': (min-width: $small-min) and (max-width: $small-max),
+    'small-min': (min-width: $small-min),
+    'small-max': (max-width: $small-max),
+    'medium': (max-width: $medium-min),
+    'medium-min-max': (min-width: $medium-min) and (max-width: $medium-max),
+    'medium-min': (min-width: $medium-min),
+    'medium-max': (max-width: $medium-max),
+    'large': (max-width: $large-min),
+    'large-min-max': (min-width: $large-min) and (max-width: $large-max),
+    'large-min': (min-width: $large-min),
+    'large-max': (max-width: $large-max),
+    'extra-large': (max-width: $extra-large-min),
+    'extra-large-min-max': (min-width: $extra-large-min) and (max-width: $extra-large-max),
+    'extra-large-min': (min-width: $extra-large-min),
+    'extra-large-max': (max-width: $extra-large-max)
+) !default;
+
+@mixin breakpoint($breakpoint) {
+    @if map-has-key($breakpoints, $breakpoint) {
+        @media only screen and #{inspect(map-get($breakpoints, $breakpoint))} {
+            @content;
+        }
+    }
+    @else {
+        @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
+        + "Available breakpoints are: #{map-keys($breakpoints)}.";
+    }
+}

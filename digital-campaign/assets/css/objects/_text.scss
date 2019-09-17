@@ -1,0 +1,54 @@
+$object: 'o-text';
+
+.#{$object} {
+    margin-bottom: 1.5em;
+    @extend %end-margin;
+
+    p {
+        margin-bottom: 1.25em;
+        @extend %end-margin;
+
+        small {
+          font-size: em(14);
+        }
+
+    }
+
+}
+
+.#{$object}--extra-small {
+  font-size: em(12);
+}
+.#{$object}--small {
+  font-size: em(14);
+}
+.#{$object}--large {
+  font-size: em(16);
+
+  @include breakpoint('medium-min') {
+    font-size: em(18);
+  }
+
+}
+.#{$object}--extra-large {
+  font-size: em(18);
+
+  @include breakpoint('medium-min') {
+    font-size: em(20);
+  }
+
+}
+
+.#{$object}--increase-extra-margin {
+  margin-bottom: 2.5em;
+}
+.#{$object}--increase-margin {
+  margin-bottom: 2em;
+}
+.#{$object}--reduce-margin {
+  margin-bottom: 0.75em;
+}
+
+.#{$object}--muted {
+  color: $text-muted;
+}

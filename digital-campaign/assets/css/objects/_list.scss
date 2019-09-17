@@ -1,0 +1,24 @@
+$object: 'o-list';
+
+.#{$object} {
+	margin-left: em(18);
+  margin-bottom: 1.5em;
+  @extend %end-margin;
+
+	@include m('unstyled') {
+		list-style: none;
+		margin: 0;
+	}
+
+	@include e('item') {
+		margin-bottom: 1.5em;
+		@extend %end-margin;
+
+		.#{$object}--inline & {
+			display: inline-block;
+			margin: 0 em(8) em(20);
+		}
+
+	}
+
+}

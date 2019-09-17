@@ -1,0 +1,65 @@
+$component: 'c-logo';
+
+$logo-extra-small: 64px;
+$logo-small: 96px;
+$logo-medium: 128px;
+$logo-large: 256px;
+$logo-extra-large: 512px;
+
+.#{$component} {
+  display: inline-block;
+}
+
+.#{$component}__link {
+
+  &:focus {
+		outline: $outline auto 5px;
+	}
+
+}
+
+.#{$component}__img {
+  display: block;
+
+  @include m('extra-small') {
+    max-height: $logo-extra-small;
+
+    @include breakpoint('medium-min') {
+      max-width: $logo-extra-small;
+    }
+
+  }
+  @include m('small') {
+    max-height: $logo-small;
+
+    @include breakpoint('medium-min') {
+      max-width: $logo-small;
+    }
+
+  }
+  @include m('medium') {
+    max-height: $logo-medium;
+
+    @include breakpoint('medium-min') {
+      max-width: $logo-medium;
+    }
+
+  }
+  @include m('large') {
+    max-height: $logo-large;
+
+    @include breakpoint('medium-min') {
+      max-width: $logo-large;
+    }
+
+  }
+  @include m('extra-large') {
+    max-height: $logo-extra-large;
+
+    @include breakpoint('medium-min') {
+      max-width: $logo-extra-large;
+    }
+
+	}
+
+}

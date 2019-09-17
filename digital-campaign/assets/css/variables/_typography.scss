@@ -1,0 +1,11 @@
+// Fonts
+
+// @font-face {
+// 	@include font-face('Helvetica', normal, normal);
+// 	@include font-face('Helvetica', normal, normal);
+// }
+
+@import url('https://fonts.googleapis.com/css?family=Lato:400,700,900');
+
+$font-heading: 'Lato', serif;
+$font-body: 'Lato', serif;

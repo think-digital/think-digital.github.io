@@ -1,0 +1,61 @@
+$component: 'c-support';
+
+.#{$component} {
+
+    @include breakpoint('medium-min') {
+        text-align: center;
+	}
+
+}
+
+.#{$component}__heading {
+
+}
+
+.#{$component}__text {
+    font-weight: 600;
+
+    @include breakpoint('small-max') {
+        @include flex;
+        @include flex-align-center;
+        height: 100%;
+        position: relative;
+        font-size: em(14);
+
+        p, img {
+            @include flex-item-basis;
+        }
+
+    }
+
+}
+
+.#{$component}__img {
+    max-height: em(90);
+    width: auto;
+
+    @include breakpoint('small-max') {
+        max-width: em(90);
+        margin-right: em(20);
+    }
+
+    @include breakpoint('medium-min-max') {
+        margin-bottom: em(10);
+        max-height: em(120);
+    }
+
+    @include breakpoint('large-min') {
+        margin-bottom: em(10);
+        max-height: em(180);
+    }
+
+    &--offset {
+
+        @include breakpoint('medium-min') {
+            position: relative;
+            top: 10px;
+        }
+
+    }
+
+}

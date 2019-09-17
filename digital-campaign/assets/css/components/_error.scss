@@ -1,0 +1,11 @@
+$component: 'c-payment';
+
+.#{$component}__error {
+
+	p {
+		font-size: em(14);
+		margin: em(-20) 0 em(15);
+		padding: em(15) em(20);
+	}
+
+}

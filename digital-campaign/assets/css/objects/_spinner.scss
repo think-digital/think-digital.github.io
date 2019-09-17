@@ -1,0 +1,39 @@
+$spinner-class: 'o-spinner';
+$spinner-size: 64;
+$spinner-color: $brand-color;
+
+.#{$spinner-class} {
+	line-height: em($spinner-size);
+	display: inline-block;
+	height: em($spinner-size);
+	position: relative;
+	text-align: center;
+	vertical-align: middle;
+    width: em($spinner-size);
+}
+
+.#{$spinner-class}__icon {
+
+    &.fa {
+        font-size: em(24);
+        line-height: em(42);
+        color: $spinner-color;
+        height: 100%;
+        left: 0;
+        position: absolute;
+        text-align: center;
+        top: 0;
+        width: 100%;
+        vertical-align: middle;
+    }
+
+}
+
+.#{$spinner-class}__background {
+
+    &.fa {
+      font-size: em($spinner-size);
+      color: darken($panel,5%);
+    }
+
+}

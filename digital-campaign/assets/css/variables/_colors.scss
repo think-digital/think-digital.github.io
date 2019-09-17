@@ -1,0 +1,169 @@
+// Default colours
+
+$black: #000;
+$white: #fff;
+
+// Theme colours
+
+$primary: #2dcc70;
+$secondary: #2c3e50;
+$tertiary: #767c83;
+
+$brand-color: #1B264F;
+$brand-accent: #ED2323;
+
+$button: #0478ED;
+$button-text: $white;
+$button-hover: darken($brand-color,10%);
+$button-hover-text: $white;
+$button-active: darken($brand-color,10%);
+$button-active-text: $white;
+
+$button-highlight: $brand-accent;
+$button-highlight-text: $white;
+$button-highlight-hover: darken($brand-accent,10%);
+$button-highlight-hover-text: $white;
+$button-highlight-active: darken($brand-accent,10%);
+$button-highlight-active-text: $white;
+
+$button-ghost: $white;
+$button-ghost-text: $white;
+$button-ghost-hover: $brand-accent;
+$button-ghost-hover-text: $white;
+$button-ghost-active: $brand-accent;
+$button-ghost-active-text: $white;
+
+$tab: $white;
+$tab-text: #2c3e50;
+$tab-hover: #2c3e50;
+$tab-hover-text: $white;
+$tab-active: #2c3e50;
+$tab-active-text: $white;
+
+$heading: $brand-color;
+$heading-highlight: #0478ED;
+$sub-heading: #2c3e50;
+$sub-heading-highlight: $primary;
+
+$text: $brand-color;
+$text-highlight: #6a747e;
+$text-muted: #6a747e;
+
+$highlight: $brand-accent;
+$gradient: #000;
+$border: darken(#ecf0f1,20%);
+$outline: #0478ED;
+$input: #fff;
+
+$field: $white;
+$field-color: #2c3e50;
+$field-placeholder: #6a747e;
+$field-border-color: darken(#ecf0f1,20%);
+
+$link: #0478ED;
+$link-hover: #0478ED;
+
+$panel: #eceff1;
+$panel-darker: darken(#ecf0f1,10%);
+$panel-highlight: $primary;
+
+$background: #eceff1;
+$alert: #e31106;
+
+$page-bg: $white;
+$page-color: #6a747e;
+
+$band-light-bg: $panel;
+$band-light-color: $text;
+$band-dark-bg: #2c3e50;
+$band-dark-color: $white;
+
+// Alert colours
+
+$success: #34bf49;
+$error: #ED2323;
+
+// Brand colours
+
+$email: #dd4b39;
+$facebook: #3b5998;
+$google: #dd4b39;
+$instagram: #e1306c;
+$linkedin: #0077b5;
+$snapchat: #fffc00;
+$twitter: #1da1f2;
+$whatsapp: #25d366;
+$youtube: #cd201f;
+
+$paypal-gold: #ffc439;
+$paypal-blue: #009CDD;
+$paypal-silver: #eee;
+$paypal-black: #2C2E2F;
+
+
+// // Default colours
+
+// $black: #000;
+// $white: #fff;
+
+// // Theme colours
+
+// // Brand colour
+// $brand-color: #1B264F;
+// $brand-accent: #ED2323;
+
+// $heading: $brand-color;
+// $heading-highlight: $brand-accent;
+
+// $text: $brand-color;
+// $text-highlight: $brand-accent;
+// $text-muted: rgba($brand-color,0.8);
+
+// $highlight: $brand-accent;
+// $border: darken(#ecf0f1,20%);
+// $input: #fff;
+
+// $field: $white;
+// $field-color: $text;
+// $field-placeholder: #6a747e;
+// $field-border-color: #DBDFE0;
+
+// $link: $text;
+// $link-hover: $text-highlight;
+
+// $panel: #ECF0F1;
+// $panel-darker: darken($panel,10%);
+// $panel-highlight: $brand-accent;
+
+// $background: $white;
+// $alert: #e31106;
+
+// $page-bg: $white;
+// $page-color: #6a747e;
+
+// $band-light-bg: $panel;
+// $band-light-color: $text;
+// $band-dark-bg: #2c3e50;
+// $band-dark-color: $white;
+
+// // Alert colours
+
+// $success: #69b670;
+// $error: #e31106;
+
+// // Brand colours
+
+// $email: #dd4b39;
+// $facebook: #3b5998;
+// $google: #dd4b39;
+// $instagram: #405de6;
+// $linkedin: #0077b5;
+// $snapchat: #fffc00;
+// $twitter: #1da1f2;
+// $whatsapp: #25d366;
+// $youtube: #cd201f;
+
+// $paypal-gold: #ffc439;
+// $paypal-blue: #009CDD;
+// $paypal-silver: #eee;
+// $paypal-black: #2C2E2F;

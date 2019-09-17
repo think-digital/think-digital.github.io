@@ -1,0 +1,83 @@
+$component: 'c-payment';
+
+.#{$component}__amounts {
+
+	.u-grid__item {
+		width: 100%;
+
+		@supports (display:flex) {
+			width: auto;
+		}
+	}
+
+}
+
+.#{$component}__amount-label {
+	display: block;
+
+	[data-currency=idr] & {
+
+		@include breakpoint('small') {
+			font-size: em(14);
+		}
+
+	}
+
+}
+
+.#{$component}__amount-radio {
+	@include opacity(0);
+	display: block;
+	height: 0;
+	left: 0;
+	margin: 0;
+	padding: 0;
+	position: absolute;
+	top: auto;
+	width: 0;
+
+	& ~ * {
+		@extend %tabs;
+		z-index: 2;
+	}
+
+	&:focus ~ * {
+		outline: $outline auto 5px;
+	}
+
+	&:hover ~ * {
+		@extend %tab-hover;
+	}
+
+	&:checked ~ * {
+		@extend %tab-active;
+
+		&:hover {
+			@extend %tab-active-hover;
+		}
+
+		.#{$component}__amounts ul:hover & {
+			@extend %tab-not-active;
+
+			&:hover {
+				@extend %tab-active-hover;
+			}
+
+		}
+
+	}
+
+}
+
+.#{$component}__amount-currency {
+	font-weight: inherit;
+}
+
+.#{$component}__desc {
+	color: $text;
+
+	p {
+		margin: 0;
+	}
+
+}

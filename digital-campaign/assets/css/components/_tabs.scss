@@ -1,0 +1,125 @@
+$object: 'o-tabs';
+
+%tab-hover {
+    background-color: $button;
+    border-color: $button;
+    color: $button-text;
+    cursor: pointer;
+}
+
+%tab-active {
+    background-color: $button;
+    border-color: $button;
+    color: $button-text;
+}
+
+%tab-active-hover {
+    background-color: $button;
+    border-color: $button;
+    color: $button-text;
+}
+
+%tab-not-active {
+    background-color: $panel;
+    border-color: $border;
+    color: $heading;
+}
+
+%tabs {
+    @include transition(all 0.1s ease-in);
+    @include border-radius($border-radius);
+    background-color: $panel;
+    border: 2px solid $border;
+    color: $heading;
+    display: block;
+    font-size: em(14);
+    padding: 0;
+    line-height: 48px;
+    font-weight: 900;
+    margin: -1px;
+	position: relative;
+	text-align: center;
+	text-decoration: none;
+    vertical-align: middle;
+    width: 100%;
+
+    @include breakpoint('small-min') {
+        font-size: em(16);
+        padding: 0 1.5em;
+        line-height: 3.25;
+    }
+
+    &:hover {
+        @extend %tab-hover;
+    }
+
+    &:focus {
+        outline: $outline auto 5px;
+    }
+
+    &.is-active {
+        @extend %tab-active;
+
+        &:hover {
+            @extend %tab-active-hover;
+        }
+
+    }
+
+    &.is-not-active {
+        @extend %tab-not-active;
+    }
+
+}
+
+.#{$object} {
+
+    @include breakpoint('small-min') {
+        text-align: center;
+    }
+
+}
+.#{$object}__item {
+    width: 100%;
+
+    @supports (display:flex) {
+        width: auto;
+    }
+}
+
+.#{$object}__nav {
+    margin-bottom: em(20);
+
+    @include breakpoint('small-min') {
+        margin-bottom: em(40);
+    }
+
+    @include breakpoint('medium-min') {
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 80%;
+    }
+
+}
+
+.#{$object}__link {
+    @extend %tabs;
+
+    &:hover {
+        @extend %tab-hover;
+    }
+
+    &.is-active {
+        @extend %tab-active;
+
+        &:hover {
+            @extend %tab-active-hover;
+        }
+
+    }
+
+    &.is-not-active {
+        @extend %tab-not-active;
+    }
+
+}

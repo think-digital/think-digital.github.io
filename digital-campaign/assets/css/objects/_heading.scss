@@ -1,0 +1,82 @@
+$object: 'o-heading';
+
+// Heading
+.#{$object} {
+    color: $heading;
+    font-size: em(20);
+    line-height: 1.1;
+    font-weight: 900;
+    margin-bottom: 0.5em;
+    @extend %end-margin;
+
+    @include breakpoint('medium-min') {
+      font-size: em(24);
+    }
+
+    // &:not(:first-child) {
+    //     margin-top: 1.75em;
+    // }
+
+    &:empty {
+      margin-bottom: 0;
+    }
+
+}
+
+// Sizing
+.#{$object}--extra-small {
+  font-size: em(12);
+  line-height: 1.2;
+
+  @include breakpoint('medium-min') {
+    font-size: em(14);
+  }
+
+}
+.#{$object}--small {
+  font-size: em(16);
+  line-height: 1.2;
+
+  @include breakpoint('medium-min') {
+    font-size: em(18);
+  }
+
+}
+.#{$object}--large {
+  font-size: em(28);
+
+  @include breakpoint('medium-min') {
+    font-size: em(36);
+  }
+
+}
+.#{$object}--extra-large {
+  font-size: em(32);
+
+  @include breakpoint('small-min-max') {
+    font-size: em(36);
+  }
+
+  @include breakpoint('medium-min') {
+    font-size: em(48);
+  }
+
+}
+
+// Color
+.#{$object}--inherit {
+  color: inherit;
+}
+.#{$object}--highlight {
+  color: $heading-highlight;
+}
+
+.#{$object}--increase-extra-margin {
+  margin-bottom: 1.5em;
+}
+.#{$object}--increase-margin {
+  margin-bottom: 0.75em;
+}
+.#{$object}--reduce-margin {
+  margin-bottom: 0.25em;
+}

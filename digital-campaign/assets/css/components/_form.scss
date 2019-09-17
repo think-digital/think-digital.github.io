@@ -1,0 +1,337 @@
+$input-background: $field;
+$input-border-radius: 5px;
+$input-border: 2px solid $field-border-color;
+$input-size: 52;
+$input-check: 36;
+$input-color: $field-color;
+$input-placeholder: $field-placeholder;
+$input-font-size: 14;
+
+.o-fieldset {
+	margin-bottom: em(20);
+	position: relative;
+
+	@include m('highlight') {
+		@include border-radius(10px);
+		background-color: $white;
+		border: 2px solid $border;
+		padding: em(20);
+		text-align: left;
+	}
+
+	@include breakpoint('small-min') {
+		margin-bottom: em(30);
+	}
+
+	&--reduce-margin {
+		margin-bottom: em(20);
+	}
+
+	&--no-margin {
+		margin-bottom: 0;
+	}
+
+	// &:last-child {
+	// 	margin-bottom: 0;
+	// }
+
+	&.is-single {
+
+		@include breakpoint('small-min') {
+			text-align: center;
+		}
+
+	}
+
+}
+
+.o-legend {
+	@include clearfix;
+	float: left;
+	margin-bottom: 1em;
+	width: 100%;
+}
+
+.o-input {
+	clear: both;
+	position: relative;
+	margin-bottom: em(20);
+
+	@include e('label') {
+		color: $heading;
+		display: block;
+		font-weight: 900;
+		margin-bottom: em(8);
+		@extend %end-margin;
+
+		@include breakpoint('small') {
+			font-size: em(12);
+		}
+		@include breakpoint('small-min') {
+			font-size: em(14);
+		}
+	}
+
+	@include e('type') {
+		position: relative;
+	}
+
+	@include e('field') {
+		@include appearance(none);
+		@include border-radius($input-border-radius);
+		@include placeholder($input-placeholder);
+		background-color: $input-background;
+		border: $input-border;
+		color: $input-color;
+		display: block;
+		font-size: em(($input-font-size));
+		height: em($input-size);
+		line-height: em($input-size);
+		padding: 0 em(15);
+		vertical-align: middle;
+		width: 100%;
+
+		@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+			line-height: em(($input-size) - 4);
+		}
+
+		&:focus {
+			outline: $outline auto 5px;
+		}
+
+		&:valid,
+		&:invalid {
+			@include appearance(none);
+		}
+
+		&.is-complete {
+
+			&:valid,
+			&:invalid {
+				@include appearance(none);
+			}
+
+			& + .o-validation:after {
+				font-size: em($input-font-size);
+				height: em($input-size);
+				line-height: em($input-size);
+				color: $input-color;
+				font-family: 'FontAwesome';
+				display: block;
+				position: absolute;
+				right: 0;
+				text-align: center;
+				vertical-align: middle;
+				bottom: 0;
+				width: em($input-size);
+				z-index: 1;
+			}
+
+			&:valid + .o-validation:after {
+				color: $success;
+				content: '\f00c';
+			}
+
+			&:invalid + .o-validation:after {
+				color: $error;
+				content: '\f00d';
+			}
+
+		}
+
+		&:focus {
+
+			& + .o-validation:after {
+				content: '' !important;
+			}
+
+		}
+
+	}
+
+	@include e('dropdown') {
+		position: relative;
+
+		&:after {
+			color: $input-color;
+			content: '\f0d7';
+			display: block;
+			font-family: 'FontAwesome';
+			font-size: em($input-font-size);
+			height: 100%;
+			position: absolute;
+			right: 0;
+			text-align: center;
+			top: 0;
+			vertical-align: middle;
+			width: em($input-size);
+			z-index: 1;
+		}
+
+	}
+
+	@include e('select') {
+		@include appearance(none);
+		color: $input-color;
+		height: 100%;
+		line-height: em($input-size);
+		background: transparent;
+		border: none;
+		position: relative;
+		top: -4px;
+		width: 100%;
+		z-index: 2;
+	}
+
+}
+
+.o-checkbox,
+.o-radio {
+	clear: both;
+	display: block;
+	margin-bottom: em(20);
+	position: relative;
+	text-align: center;
+	@extend %end-margin;
+
+	.o-giftaid & {
+		margin: em(40) em(-20) em(30);
+	}
+
+	@include e('label') {
+		display: inline-block;
+    position: relative;
+		max-width: 100%;
+
+		@include breakpoint('small-min') {
+			max-width: 90%;
+		}
+
+		.o-giftaid & {
+			width: 100%;
+		}
+
+	}
+
+	@include e('field') {
+		@include opacity(0);
+		display: block;
+		height: 0;
+		left: 0;
+		margin: 0;
+		padding: 0;
+		position: absolute;
+		top: 0;
+		width: 0;
+
+		& ~ * {
+			font-weight: bold;
+			display: block;
+			cursor: pointer;
+			padding-left: 48px;
+			position: relative;
+
+			.is-single & {
+				display: inline-block;;
+			}
+
+			&:after {
+				@include border-radius($border-radius);
+				background-color: $panel;
+				border: 2px solid $border;
+				color: $heading;
+				content: '';
+				display: block;
+				font-family: 'FontAwesome';
+				font-size: em(20);
+				height: 36px;
+				left: 0;
+				line-height: 32px;
+				position: absolute;
+				text-align: center;
+				top: 1px;
+				vertical-align: middle;
+				width: 36px;
+
+				.o-giftaid & {
+					top: -8px;
+				}
+
+			}
+
+		}
+
+		&:checked ~ * {
+
+			&:after {
+        background-color: $success;
+        border-color: darken($success,3%);
+				color: $white;
+				content: '\f00c';
+			}
+
+		}
+
+		&:focus ~ * {
+
+			&:after {
+        outline: $outline auto 5px;
+			}
+
+
+		}
+
+	}
+
+	@include e('text') {
+		color: $heading;
+		text-align: left;
+
+		@include breakpoint('small') {
+			font-size: em(12);
+		}
+
+		@include breakpoint('small-min') {
+			font-size: em(13);
+		}
+
+		.o-giftaid & {
+			position: relative;
+			top: 10px;
+		}
+
+	}
+
+}
+
+.o-validation {
+
+	@include m('success') {
+		color: $success;
+	}
+
+	@include m('error') {
+		color: $error;
+	}
+
+}
+
+.o-error {
+
+	p {
+		// @include border-radius(5px);
+		// border: 2px solid $error;
+		font-size: em(13);
+		// background-color: $error;
+		font-weight: bold;
+		color: $error;
+		margin-top: em(10);
+		// padding: em(10) em(20);
+		// text-align: center;
+	}
+
+	.fa {
+		margin-right: em(5);
+	}
+
+}

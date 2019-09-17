@@ -1,0 +1,40 @@
+$component: 'c-header';
+
+.#{$component} {
+  color: $white;
+  padding: em(15) em(20);
+
+  @include breakpoint('large-min') {
+    padding: em(20) em(40);
+  }
+
+  .default & {
+    padding-top: 0;
+  }
+
+}
+
+.#{$component}__content {
+  display: inline-block;
+
+  .o-button {
+    font-size: em(12);
+
+    @include breakpoint('extra-small-min') {
+      font-size: em(14);
+    }
+
+  }
+
+  &--text-only {
+    padding-bottom: em(20);
+  }
+
+}
+
+.#{$component}__secure {
+  @include text-shadow(0px 0px 5px rgba($gradient,0.75));
+  display: block;
+  margin-top: 5px;
+  text-align: center;
+}

@@ -1,0 +1,146 @@
+$component: 'c-hero';
+
+$hero-image: 420px;
+$hero-image-small: 480px;
+$hero-image-medium: 560px;
+$hero-image-large: 640px;
+$hero-image-extra-large: 720px;
+
+.#{$component} {
+  position: relative;
+}
+
+.#{$component}__image {
+
+  @include breakpoint('medium-max') {
+    position: relative;
+  }
+
+  @include m('gradient') {
+
+		&:before {
+      @include opacity(1);
+      background-image: radial-gradient(rgba($gradient,0),rgba($gradient,0.75));
+      bottom: 0;
+      content: '';
+      height: 100%;
+      left: 0;
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 100%;
+      z-index: 1;
+    }
+
+  }
+
+  .no-object-fit & {
+    height: $hero-image;
+
+    @include breakpoint('small-min-max') { height: $hero-image-small; }
+    @include breakpoint('medium-min-max') { height: $hero-image-medium; }
+    @include breakpoint('large-min') { height: $hero-image-large; }
+
+    &.is-object-fit-fallback {
+        background-size: cover;
+
+        &.is-center-left { background-position: center left; }
+        &.is-center-right { background-position: center right; }
+        &.is-center-center { background-position: center center; }
+        &.is-top-left { background-position: top left; }
+        &.is-top-right { background-position: top right; }
+        &.is-top-center { background-position: top center; }
+        &.is-bottom-left { background-position: bottom left; }
+        &.is-bottom-right { background-position: bottom right; }
+        &.is-bottom-center { background-position: bottom center; }
+
+        .#{$component}__img {
+            opacity: 0 !important;
+        }
+
+    }
+
+  }
+
+}
+
+.#{$component}__img {
+  background-color: $black;
+  display: block;
+  width: 100%;
+  object-fit: cover;
+  height: $hero-image;
+
+  @include breakpoint('small-min-max') { height: $hero-image-small; }
+  @include breakpoint('medium-min-max') { height: $hero-image-medium; }
+  @include breakpoint('large-min') { height: $hero-image-large; }
+
+  &.is-center-left { object-position: center left; }
+  &.is-center-right { object-position: center right; }
+  &.is-center-center { object-position: center center; }
+  &.is-top-left { object-position: top left; }
+  &.is-top-right { object-position: top right; }
+  &.is-top-center { object-position: top center; }
+  &.is-bottom-left { object-position: bottom left; }
+  &.is-bottom-right { object-position: bottom right; }
+  &.is-bottom-center { object-position: bottom center; }
+
+}
+
+.#{$component}__credit {
+  @include text-shadow(0px 0px 5px rgba($gradient,0.75));
+  color: rgba(255,255,255,0.75);
+  font-size: em(11);
+  padding: 20px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 10;
+
+  @include breakpoint('extra-small-min') {
+    padding: 20px 30px;
+  }
+
+  @include breakpoint('large-min') {
+    padding: 10px;
+    left: auto;
+    right: 0;
+  }
+
+}
+
+.#{$component}__content {
+  padding: em(20);
+
+  @include breakpoint('extra-small-min') {
+    padding: em(30);
+  }
+
+  &--with-credit {
+    padding-bottom: em(50);
+  }
+
+  @include breakpoint('large-min') {
+    padding-bottom: em(140);
+  }
+
+}
+
+.#{$component}__label {
+  @include box-shadow(0px 0px 5px rgba($gradient,0.5));
+  background-color: $brand-accent;
+  color: $white;
+  display: inline-block;
+  padding: em(3) em(10);
+}
+
+.#{$component}__heading {
+  color: $white;
+  text-shadow: 0px 0px 10px rgba($gradient,0.75);
+}
+
+.#{$component}__text {
+  text-shadow: 0px 0px 5px rgba($gradient,0.75);
+  color: $white;
+  font-size: em(18);
+}
