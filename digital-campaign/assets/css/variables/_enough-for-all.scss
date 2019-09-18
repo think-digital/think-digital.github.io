@@ -14,10 +14,10 @@ $primary: #2dcc70;
 $secondary: #2c3e50;
 $tertiary: #767c83;
 
-$brand-color: #1B264F;
-$brand-accent: #ED2323;
+$brand-color: #2c3e50;
+$brand-accent: #F5A623;
 
-$button: #0478ED;
+$button: $brand-accent;
 $button-text: $white;
 $button-hover: darken($brand-color,10%);
 $button-hover-text: $white;
@@ -46,7 +46,7 @@ $tab-active: #2c3e50;
 $tab-active-text: $white;
 
 $heading: $brand-color;
-$heading-highlight: #0478ED;
+$heading-highlight: $brand-accent;
 $sub-heading: #2c3e50;
 $sub-heading-highlight: $primary;
 

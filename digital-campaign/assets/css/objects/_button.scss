@@ -235,7 +235,7 @@ $border-radius: 100px;
 		&--#{nth($social-list, $i)} {
 			background-color: $white;
 			border: none;
-			color: $heading;
+			color: $brand-accent;
 
 			&:hover {
 				background-color: $white;

@@ -26,7 +26,7 @@
 	}
 
 	@include m('dark') {
-		background-color: $heading;
+		background-color: $brand-accent;
 		color: $white;
 	}
 
