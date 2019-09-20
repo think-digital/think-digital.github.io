@@ -1,11 +1,12 @@
+const touchsupport = ('ontouchstart' in window) || (navigator.maxTouchPoints > 0) || (navigator.msMaxTouchPoints > 0);
+
 // Scroll to anchor
 const anchors = document.querySelectorAll('a[href^="#"]:not(.is-static)');
 anchors.forEach((anchor) => {
   anchor.addEventListener('click', () => {
     const target = document.querySelector(anchor.hash);
     event.preventDefault();
-    // target.scrollIntoView({ block: 'start', behavior: 'smooth' });
-    target.scrollIntoView();
+    target.scrollIntoView({ block: 'start', behavior: 'smooth' });
   });
 });
 
@@ -22,8 +23,6 @@ if ('objectFit' in document.documentElement.style === false) {
   });
 }
 
-const touchsupport = ('ontouchstart' in window) || (navigator.maxTouchPoints > 0) || (navigator.msMaxTouchPoints > 0);
-
 // Settings for payment amounts
 function paymentAmountSettings(paymentType) {
   // Set variables
@@ -32,6 +31,7 @@ function paymentAmountSettings(paymentType) {
   const amountDescPreview = document.querySelector(`.js-${paymentType}-desc-preview`);
   const amountPanel = document.querySelector(`.js-${paymentType}-panel`);
   const amountOther = document.querySelector(`.js-${paymentType}-other`);
+  // const amountErrorMessage = document.querySelector(`.js-${paymentType}-error-message`);
 
   // Round input amount value
   function getRoundedAmount() {
@@ -69,8 +69,7 @@ function paymentAmountSettings(paymentType) {
   // Scroll to donation amount anchor
   function setAmountScroll() {
     const target = document.querySelector('.js-payment-anchor');
-    // target.scrollIntoView({ block: 'start', behavior: 'smooth' });
-    target.scrollIntoView();
+    target.scrollIntoView({ block: 'start', behavior: 'smooth' });
   }
   // Show amount description
   function showAmount() {
@@ -124,6 +123,7 @@ function paymentAmountSettings(paymentType) {
           showAmount();
           hideOtherAmount();
           amountDescText.innerHTML = amount.getAttribute('data-desc');
+          // amountErrorMessage.innerHTML = '';
           document.querySelector(`.js-${paymentType}-amount[data-type=other]`).classList.remove('is-hidden');
         }
       });
@@ -137,6 +137,7 @@ function paymentAmountSettings(paymentType) {
             showpreviewAmount();
             hideOtherAmount();
             amountDescPreview.innerHTML = amount.getAttribute('data-desc');
+            // amountErrorMessage.innerHTML = '';
           }
         });
         amount.addEventListener('mouseout', () => {
