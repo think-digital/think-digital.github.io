@@ -1,5 +1,3 @@
-const touchsupport = ('ontouchstart' in window) || (navigator.maxTouchPoints > 0) || (navigator.msMaxTouchPoints > 0);
-
 // Scroll to anchor
 const anchors = document.querySelectorAll('a[href^="#"]:not(.is-static)');
 anchors.forEach((anchor) => {
@@ -22,6 +20,8 @@ if ('objectFit' in document.documentElement.style === false) {
     }
   });
 }
+
+const touchsupport = ('ontouchstart' in window) || (navigator.maxTouchPoints > 0) || (navigator.msMaxTouchPoints > 0);
 
 // Settings for payment amounts
 function paymentAmountSettings(paymentType) {
