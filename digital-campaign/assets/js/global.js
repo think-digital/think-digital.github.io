@@ -1,10 +1,11 @@
 // Scroll to anchor
-const anchors = document.querySelectorAll('a[href^="#"]');
+const anchors = document.querySelectorAll('a[href^="#"]:not(.is-static)');
 anchors.forEach((anchor) => {
   anchor.addEventListener('click', () => {
     const target = document.querySelector(anchor.hash);
     event.preventDefault();
-    target.scrollIntoView({ block: 'start', behavior: 'smooth' });
+    // target.scrollIntoView({ block: 'start', behavior: 'smooth' });
+    target.scrollIntoView();
   });
 });
 
@@ -68,7 +69,8 @@ function paymentAmountSettings(paymentType) {
   // Scroll to donation amount anchor
   function setAmountScroll() {
     const target = document.querySelector('.js-payment-anchor');
-    target.scrollIntoView({ block: 'start', behavior: 'smooth' });
+    // target.scrollIntoView({ block: 'start', behavior: 'smooth' });
+    target.scrollIntoView();
   }
   // Show amount description
   function showAmount() {
