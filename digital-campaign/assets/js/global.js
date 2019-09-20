@@ -1,5 +1,5 @@
 // Scroll to anchor
-const anchors = document.querySelectorAll('a[href^="#"]:not(.is-static)');
+const anchors = document.querySelectorAll('a[href^="#"]');
 anchors.forEach((anchor) => {
   anchor.addEventListener('click', () => {
     const target = document.querySelector(anchor.hash);
