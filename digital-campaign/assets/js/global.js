@@ -31,7 +31,6 @@ function paymentAmountSettings(paymentType) {
   const amountDescPreview = document.querySelector(`.js-${paymentType}-desc-preview`);
   const amountPanel = document.querySelector(`.js-${paymentType}-panel`);
   const amountOther = document.querySelector(`.js-${paymentType}-other`);
-  const amountErrorMessage = document.querySelector(`.js-${paymentType}-error-message`);
 
   // Round input amount value
   function getRoundedAmount() {
@@ -123,7 +122,6 @@ function paymentAmountSettings(paymentType) {
           showAmount();
           hideOtherAmount();
           amountDescText.innerHTML = amount.getAttribute('data-desc');
-          amountErrorMessage.innerHTML = '';
           document.querySelector(`.js-${paymentType}-amount[data-type=other]`).classList.remove('is-hidden');
         }
       });
@@ -137,7 +135,6 @@ function paymentAmountSettings(paymentType) {
             showpreviewAmount();
             hideOtherAmount();
             amountDescPreview.innerHTML = amount.getAttribute('data-desc');
-            amountErrorMessage.innerHTML = '';
           }
         });
         amount.addEventListener('mouseout', () => {
